@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c6026b96e6fa11a641b51a6ba976f5e",
-    "content-hash": "5bd58fd976f1ee3e9611bc37c006ec46",
+    "hash": "6efb53206e3e8e0b7ae4db798d4f2c44",
+    "content-hash": "43d7fc2044e1d89fc7c6849eb8f3d1cb",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -361,6 +361,52 @@
                 "tokenizer"
             ],
             "time": "2015-03-11 20:06:43"
+        },
+        {
+            "name": "khill/fontawesomephp",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kevinkhill/FontAwesomePHP.git",
+                "reference": "c419c0c2ba281bb4f57b78575c426c89a6778bbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kevinkhill/FontAwesomePHP/zipball/c419c0c2ba281bb4f57b78575c426c89a6778bbf",
+                "reference": "c419c0c2ba281bb4f57b78575c426c89a6778bbf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.0",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Khill\\Fontawesome": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Hill",
+                    "email": "kevinkhill@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP wrapper library for the fantastic FontAwesome icon set.",
+            "time": "2015-10-10 15:05:06"
         },
         {
             "name": "laravel/framework",
