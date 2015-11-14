@@ -9,6 +9,7 @@ class CreateVcardsTable extends Migration
      * Run the migrations.
      *
      * @see http://microformats.org/wiki/h-card
+     * @see https://html.spec.whatwg.org/#vcard
      * @see http://tools.ietf.org/html/rfc6350
      * @return void
      */
