@@ -154,7 +154,7 @@ return [
         /*
          * Vendor Service Providers...
          */
-        'Khill\Fontawesome\FontAwesomeServiceProvider'
+        // Khill\Fontawesome\FontAwesomeServiceProvider::class
     ],
 
     /*

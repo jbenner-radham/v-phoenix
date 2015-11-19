@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class VcardKindsTableSeeder extends Seeder
+class TypesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,11 +13,11 @@ class VcardKindsTableSeeder extends Seeder
      */
     public function run()
     {
-        $kinds = ['individual', 'group', 'org', 'location'];
+        $types = ['individual', 'group', 'org', 'location'];
 
-        foreach ($kinds as $kind) {
-            DB::table('vcard_kinds')->insert([
-                'name' => $kind
+        foreach ($types as $type) {
+            DB::table('types')->insert([
+                'name' => $type
             ]);
         }
     }
