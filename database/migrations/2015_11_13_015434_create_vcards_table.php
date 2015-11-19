@@ -17,14 +17,13 @@ class CreateVcardsTable extends Migration
     {
         Schema::create('vcards', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
-            $table->integer('adr'); /** @todo Make relation */
+            $table->foreign('address_id')->references('id')->on('addresses');
             $table->string('email');
             $table->string('family_name');
             $table->string('given_name');
-            $table->integer('kind'); /** @todo Make relation */
+            $table->foreign('kind_id')->references('id')->on('vcard_kinds');
+            $table->timestamps();
             $table->string('title');
-
         });
     }
 
