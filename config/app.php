@@ -154,7 +154,7 @@ return [
         /*
          * Vendor Service Providers...
          */
-        //-/ Khill\Fontawesome\FontAwesomeServiceProvider::class,
+        Khill\Fontawesome\FontAwesomeServiceProvider::class,
         //-/ Laralib\L5scaffold\GeneratorsServiceProvider::class
     ],
 
