@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/vcards', function () {
-    return view('vcards');
-});
+Route::resource('vcard', 'VCardController');
