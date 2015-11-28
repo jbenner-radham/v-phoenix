@@ -13,6 +13,24 @@
             <div class="col-sm-6">
                 <input type="text" name="email" id="email" class="form-control">
             </div>
+
+            <!---->
+
+            <label for="type" class="col-sm-3 control-label">Kind</label>
+
+            <div class="col-sm-6">
+                <select name="type" id="type">
+                @foreach ($types as $type)
+                    @if ($type->name == 'individual')
+                        {{-- Set "individual" to `selected` --}}
+                        <option name="{{ $type->id }}" selected>{{ ucfirst($type->name) }}</option>
+                    @else
+                        <option name="{{ $type->id }}">{{ ucfirst($type->name) }}</option>
+                    @endif
+                    @endforeach
+                </select>
+                {!! dump($types) !!}
+            </div>
         </div>
 
         <!-- Add Task Button -->
