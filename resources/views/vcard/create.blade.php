@@ -8,7 +8,7 @@
 
         <!-- Email -->
         <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">Task</label>
+            <label for="email" class="col-sm-3 control-label">Email</label>
 
             <div class="col-sm-6">
                 <input type="text" name="email" id="email" class="form-control">
@@ -23,6 +23,7 @@
                 </button>
             </div>
         </div>
+        {!! csrf_field() !!}
     </form>
 </div>
 
