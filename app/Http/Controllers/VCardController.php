@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Type;
+use App\Kind;
 use App\VCard;
 use Illuminate\Http\Request;
 
@@ -27,7 +27,7 @@ class VCardController extends Controller {
 	 */
 	public function create()
 	{
-        $types = Type::all();
+        $types = Kind::all();
 
 		return view('vcard.create', compact('types'));
 	}

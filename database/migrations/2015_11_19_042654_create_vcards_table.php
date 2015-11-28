@@ -35,8 +35,8 @@ class CreateVcardsTable extends Migration
             $table->string('street_address');
 
             // Meta
-            $table->integer('type_id')->unsigned();
-            $table->foreign('type_id')->references('id')->on('types');
+            $table->integer('kind_id')->unsigned();
+            $table->foreign('kind_id')->references('id')->on('kinds');
             $table->timestamps();
         });
     }

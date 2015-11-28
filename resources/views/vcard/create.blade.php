@@ -7,22 +7,46 @@
     <form action="/vcard" method="POST" class="form-horizontal">
 
         <!-- Email -->
+        <div class="vcard">
+{{--
         <div class="form-group">
             <label for="email" class="col-sm-3 control-label">Email</label>
 
             <div class="col-sm-6">
                 <input type="text" name="email" id="email" class="form-control">
             </div>
+--}}
+            <label>
+                Email
+                <input class="email" type="email" name="email">
+            </label>
 
             <!---->
 
+            <hr>
+
+            <label>
+                Type
+                <select name="type" id="type">
+                    @foreach ($types as $type)
+                        @if ($type->name == 'individual')
+                            {{-- Set "individual" to `selected` --}}
+                            <option name="{{ $type->id }}" selected>{{ ucfirst($type->name) }}</option>
+                        @else
+                            <option name="{{ $type->id }}">{{ ucfirst($type->name) }}</option>
+                        @endif
+                    @endforeach
+                </select>
+            </label>
+
+{{--
             <label for="type" class="col-sm-3 control-label">Kind</label>
 
             <div class="col-sm-6">
                 <select name="type" id="type">
                 @foreach ($types as $type)
                     @if ($type->name == 'individual')
-                        {{-- Set "individual" to `selected` --}}
+                        <!-- Set "individual" to `selected` -->
                         <option name="{{ $type->id }}" selected>{{ ucfirst($type->name) }}</option>
                     @else
                         <option name="{{ $type->id }}">{{ ucfirst($type->name) }}</option>
@@ -32,6 +56,7 @@
                 {!! dump($types) !!}
             </div>
         </div>
+--}}
 
         <!-- Add Task Button -->
         <div class="form-group">

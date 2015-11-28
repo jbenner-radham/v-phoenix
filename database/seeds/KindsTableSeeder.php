@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TypesTableSeeder extends Seeder
+class KindsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,11 +14,11 @@ class TypesTableSeeder extends Seeder
      */
     public function run()
     {
-        $types = ['individual', 'group', 'org', 'location', 'device'];
+        $kinds = ['individual', 'group', 'org', 'location', 'device'];
 
-        foreach ($types as $type) {
-            DB::table('types')->insert([
-                'name' => $type
+        foreach ($kinds as $kind) {
+            DB::table('kinds')->insert([
+                'name' => $kind
             ]);
         }
     }
