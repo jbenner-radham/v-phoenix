@@ -2,71 +2,118 @@
 
 @section('content')
 
-<div class="panel-body">
+<div class="panel-body" vocab="http://microformats.org/profile/hcard">
     <!-- New VCard Form -->
     <form action="/vcard" method="POST" class="form-horizontal">
-
-        <!-- Email -->
         <div class="vcard">
-{{--
-        <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">Email</label>
 
-            <div class="col-sm-6">
-                <input type="text" name="email" id="email" class="form-control">
-            </div>
---}}
+            <!-- Email -->
             <label>
-                Email
-                <input class="email" type="email" name="email">
+                Email <input class="email" type="email" name="email">
             </label>
-
-            <!---->
 
             <hr>
 
+            <!-- N -->
+            <span class="n">
+
+                <!-- Family Name -->
+                <label>
+                    Family Name <input type="text" class="family-name" name="family-name">
+                </label>
+
+                <hr>
+
+                <!-- Given Name -->
+                <label>
+                    Given Name <input type="text" class="given-name" name="given-name">
+                </label>
+            </span> <!-- .n -->
+
+            <hr>
+
+            <!-- Title -->
             <label>
-                Type
-                <select name="type" id="type">
+                Title <input type="text" class="title" name="title">
+            </label>
+
+            <hr>
+
+            <!-- ADR -->
+            <span class="adr">
+
+                <!-- Street Address -->
+                <label>
+                    Street Address <input type="text" class="street-address" name="street-address">
+                </label>
+
+                <hr>
+
+                <!-- Extended Address -->
+                <label>
+                    Extended Address <input type="text" class="extended-address" name="extended-address">
+                </label>
+
+                <hr>
+
+                <!-- Region -->
+                <label>
+                    Region <input type="text" class="region" name="region">
+                </label>
+
+                <hr>
+
+                <!-- Postal Code -->
+                <label>
+                    Postal Code <input type="text" class="postal-code" name="postal-code">
+                </label>
+
+                <hr>
+
+                <!-- Country Name -->
+                <label>
+                    Country Name <input type="text" class="country-name" name="country-name">
+                </label>
+
+                <hr>
+
+                <!-- Locality -->
+                <label>
+                    Locality <select class="locality" name="locality">
+                        <option selected>en-US</option>
+                        <option>en-CA</option>
+                        <option>fr-CA</option>
+                    </select>
+                </label>
+            </span> <!-- .adr -->
+
+            <hr>
+
+            <!-- Kind -->
+            <label>
+                Kind <select class="kind" name="kind">
                     @foreach ($types as $type)
                         @if ($type->name == 'individual')
                             {{-- Set "individual" to `selected` --}}
-                            <option name="{{ $type->id }}" selected>{{ ucfirst($type->name) }}</option>
+                            <option value="{{ $type->id }}" selected>{{ ucfirst($type->name) }}</option>
                         @else
-                            <option name="{{ $type->id }}">{{ ucfirst($type->name) }}</option>
+                            <option value="{{ $type->id }}">{{ ucfirst($type->name) }}</option>
                         @endif
                     @endforeach
                 </select>
             </label>
 
-{{--
-            <label for="type" class="col-sm-3 control-label">Kind</label>
+            {!! csrf_field() !!}
 
-            <div class="col-sm-6">
-                <select name="type" id="type">
-                @foreach ($types as $type)
-                    @if ($type->name == 'individual')
-                        <!-- Set "individual" to `selected` -->
-                        <option name="{{ $type->id }}" selected>{{ ucfirst($type->name) }}</option>
-                    @else
-                        <option name="{{ $type->id }}">{{ ucfirst($type->name) }}</option>
-                    @endif
-                    @endforeach
-                </select>
-                {!! dump($types) !!}
+            <!-- Add vCard Button -->
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-6">
+                    <button type="submit" class="btn btn-default">
+                        <i class="fa fa-plus"></i> Add vCard
+                    </button>
+                </div>
             </div>
-        </div>
---}}
-
-        <!-- Add Task Button -->
-        <div class="form-group">
-            <div class="col-sm-offset-3 col-sm-6">
-                <button type="submit" class="btn btn-default">
-                    <i class="fa fa-plus"></i> Add VCard
-                </button>
-            </div>
-        </div>
-        {!! csrf_field() !!}
+        </div> <!-- .vcard -->
     </form>
 </div>
 
