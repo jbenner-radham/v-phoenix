@@ -15,7 +15,7 @@
 - __[µF HCARD]__
   - Tantek, Ç, and B. Suda, "hCard 1.0", June 2013, <<http://microformats.org/wiki/hcard>>.
 - __[µF2 HCARD]__
-  - Tantek, Ç, and B. Suda, "h-card",  October 2015, <<http://microformats.org/wiki/h-card>>.
+  - Tantek, Ç, "h-card",  October 2015, <<http://microformats.org/wiki/h-card>>.
 - __[W3C DATETIME]__ 
   - Wolf, M., and C. Wicksteed, "Date and Time Formats", Reuters Limited,
   August 1997, <<http://www.w3.org/TR/NOTE-datetime>>.
