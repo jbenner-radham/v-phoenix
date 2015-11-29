@@ -31,6 +31,6 @@ class CreateIcalendarsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('icalendars');
+        Schema::dropIfExists('icalendars');
     }
 }
