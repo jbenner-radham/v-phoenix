@@ -40,7 +40,28 @@ class VCardController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-		$vcard = new VCard();
+        // $params =& $request->request;
+//return dump($params->all());
+
+		$vcard = new VCard;
+
+        $vcard->email            = $request->email;
+        $vcard->family_name      = $request->family_name;
+        $vcard->given_name       = $request->given_name;
+        $vcard->title            = $request->title;
+        $vcard->street_address   = $request->street_address;
+        $vcard->extended_address = $request->extended_address;
+        $vcard->region           = $request->region;
+        $vcard->postal_code      = $request->postal_code;
+        $vcard->country_name     = $request->country_name;
+        $vcard->locality         = $request->locality;
+        $vcard->kind_id          = $request->kind_id;
+
+
+        //return dump($vcard);
+        //return dump($params->all());
+        // dump($request->email);
+        // return dump($request->request->all());
 
 		$vcard->save();
 
