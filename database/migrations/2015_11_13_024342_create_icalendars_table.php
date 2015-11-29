@@ -16,11 +16,11 @@ class CreateIcalendarsTable extends Migration
     {
         Schema::create('icalendars', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->dateTime('dtend');
             $table->dateTime('dtstart');
             $table->string('location');
             $table->string('summary');
+            $table->timestamps();
         });
     }
 
@@ -31,6 +31,6 @@ class CreateIcalendarsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('icalendars');
+        Schema::dropIfExists('icalendars');
     }
 }
