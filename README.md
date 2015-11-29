@@ -19,6 +19,8 @@
 - __[W3C DATETIME]__ 
   - Wolf, M., and C. Wicksteed, "Date and Time Formats", Reuters Limited,
   August 1997, <<http://www.w3.org/TR/NOTE-datetime>>.
-
+- __[W3C VCARD]__
+  - Iannella, R., and J. McKinney, "vCard Ontology - for describing People and Organizations",
+  W3C Interest Group, May 2014, <<http://www.w3.org/TR/vcard-rdf/>>.
 
 
