@@ -40,11 +40,7 @@ class VCardController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-        // $params =& $request->request;
-//return dump($params->all());
-
 		$vcard = new VCard;
-
         $vcard->email            = $request->email;
         $vcard->family_name      = $request->family_name;
         $vcard->given_name       = $request->given_name;
@@ -56,16 +52,10 @@ class VCardController extends Controller {
         $vcard->country_name     = $request->country_name;
         $vcard->locality         = $request->locality;
         $vcard->kind_id          = $request->kind_id;
+        $vcard->save();
 
-
-        //return dump($vcard);
-        //return dump($params->all());
-        // dump($request->email);
-        // return dump($request->request->all());
-
-		$vcard->save();
-
-		return redirect()->route('vcard.index')->with('message', 'Item created successfully.');
+        return redirect()->route('vcard.index')
+                         ->with('message', 'Item created successfully.');
 	}
 
 	/**
