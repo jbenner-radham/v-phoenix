@@ -79,11 +79,7 @@
 
                 <!-- Locality -->
                 <label>
-                    Locality <select class="locality" name="locality">
-                        <option selected>en-US</option>
-                        <option>en-CA</option>
-                        <option>fr-CA</option>
-                    </select>
+                    Locality <input type="text" class="locality" name="locality">
                 </label>
             </span> <!-- .adr -->
 

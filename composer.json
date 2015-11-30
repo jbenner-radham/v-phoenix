@@ -8,7 +8,16 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "barryvdh/laravel-ide-helper": "^2.1",
-        "doctrine/dbal": "~2.3"
+        "doctrine/dbal": "~2.3",
+        "laravel/installer": "@stable",
+        "mcrumm/pecan": "@stable",
+        "laravel/envoy": "@stable",
+        "sebastian/phpdcd": "@stable",
+        "codeception/codeception": "@stable",
+        "vinkla/climb": "@stable",
+        "squizlabs/php_codesniffer": "@stable",
+        "phploc/phploc": "@stable",
+        "phalcon/zephir": "@stable"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
