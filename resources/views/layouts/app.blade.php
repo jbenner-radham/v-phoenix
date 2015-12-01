@@ -11,6 +11,7 @@
             <https://html.spec.whatwg.org/multipage/semantics.html#character-encoding-declaration>
         --}}
         <meta charset="utf-8">
+        <meta property="og:locale" content="en_US">
         {{--
             Microsoft Corporation,
             "X-UA-Compatibility Meta Tag and HTTP Response Header", MS-IEDOCO,
