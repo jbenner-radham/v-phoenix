@@ -17,7 +17,8 @@
         "vinkla/climb": "@stable",
         "squizlabs/php_codesniffer": "@stable",
         "phploc/phploc": "@stable",
-        "phalcon/zephir": "@stable"
+        "phalcon/zephir": "@stable",
+        "semantic/ui": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

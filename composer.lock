@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "85a85eb50bcfd56e86c3dc3466d0e242",
-    "content-hash": "73423d056b2008a45009e82e079a8bfa",
+    "hash": "ab36f0e1a887be67671286e743ed66fa",
+    "content-hash": "e4e9a105b42de4206832d635871b04fc",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -3928,6 +3928,43 @@
                 "prompt"
             ],
             "time": "2015-04-30 20:24:49"
+        },
+        {
+            "name": "semantic/ui",
+            "version": "2.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Semantic-Org/Semantic-UI.git",
+                "reference": "637471e86c1e44039c38ade112de64b7a349c1ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Semantic-Org/Semantic-UI/zipball/637471e86c1e44039c38ade112de64b7a349c1ef",
+                "reference": "637471e86c1e44039c38ade112de64b7a349c1ef",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jack Lukic",
+                    "email": "jacklukic@gmail.com",
+                    "homepage": "http://www.jacklukic.com",
+                    "role": "Creator"
+                }
+            ],
+            "description": "Semantic empowers designers and developers by creating a shared vocabulary for UI.",
+            "homepage": "http://www.semantic-ui.com",
+            "keywords": [
+                "css",
+                "framework",
+                "semantic",
+                "ui"
+            ],
+            "time": "2015-11-06 19:07:18"
         },
         {
             "name": "squizlabs/php_codesniffer",
