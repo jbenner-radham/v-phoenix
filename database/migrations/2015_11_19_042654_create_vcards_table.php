@@ -33,6 +33,7 @@ class CreateVcardsTable extends Migration
             $table->string('postal_code');
             $table->string('region');
             $table->string('street_address');
+            $table->string('tel');
 
             // Meta
             $table->integer('kind_id')->unsigned();
