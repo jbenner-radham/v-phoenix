@@ -17,11 +17,15 @@
             </div>
 
             <div class="description">
+                <!-- [Street Address] -->
                 <span class="p-street-address">{{ $vcard->street_address }}</span><br>
-                <span class="p-locality">{{ $vcard->locality }}</span>, <span class="p-region">{{ $vcard->region }}</span><br>
+                <!-- [Locality], [Region] [Postal Code] -->
+                <span class="p-locality">{{ $vcard->locality }}</span>, <span class="p-region">{{ $vcard->region }}</span> <span class="p-postal-code">{{ $vcard->postal_code }}</span><br>
+                <!-- [Tel] -->
                 <a class="p-tel" href="tel:{{ $vcard->tel }}">{{ $vcard->tel }}</a><br>
+                <!-- [Email] -->
                 <a class="u-email"  href="mailto:{{ $vcard->email }}">{{ $vcard->email }}</a>
-            </div>
+            </div> <!-- .description -->
         </div> <!-- .content -->
 
         <div class="extra content">
