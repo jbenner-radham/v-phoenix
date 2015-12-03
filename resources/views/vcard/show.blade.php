@@ -16,9 +16,9 @@
                 {{ $vcard->title }}
             </div>
 
-            <div class="description">
+            <div class="description p-adr h-adr">
                 <!-- [Street Address] -->
-                <span class="p-street-address">{{ $vcard->street_address }}</span><br>
+                <span class="p-street-address" contenteditable>{{ $vcard->street_address }}</span><br>
                 <!-- [Locality], [Region] [Postal Code] -->
                 <span class="p-locality">{{ $vcard->locality }}</span>, <span class="p-region">{{ $vcard->region }}</span> <span class="p-postal-code">{{ $vcard->postal_code }}</span><br>
                 <!-- [Tel] -->
