@@ -46,8 +46,8 @@
     </head>
     <body>
         <main>
-            <div class="ui stackable container menu">
-                <div class="item">vPhoenix</div>
+            <div class="ui blue stackable menu">
+                <div class="header item">v-phoenix</div>
             </div>
             @yield('content')
         </main>
