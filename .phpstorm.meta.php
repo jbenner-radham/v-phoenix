@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2015-11-29.
+    * Generated on 2015-12-04.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -19,7 +19,6 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Http\Kernel' instanceof \App\Http\Kernel,
             'Illuminate\Contracts\Console\Kernel' instanceof \App\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \App\Exceptions\Handler,
-            'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
             'auth' instanceof \Illuminate\Auth\AuthManager,
             'auth.driver' instanceof \Illuminate\Auth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
@@ -28,6 +27,7 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Queue\EntityResolver' instanceof \Illuminate\Database\Eloquent\QueueEntityResolver,
             'db.factory' instanceof \Illuminate\Database\Connectors\ConnectionFactory,
             'db' instanceof \Illuminate\Database\DatabaseManager,
+            'db.connection' instanceof \Illuminate\Database\MySqlConnection,
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
@@ -39,6 +39,8 @@ namespace PHPSTORM_META {
             'view.engine.resolver' instanceof \Illuminate\View\Engines\EngineResolver,
             'view.finder' instanceof \Illuminate\View\FileViewFinder,
             'view' instanceof \Illuminate\View\Factory,
+            'command.larascaf.scaffold' instanceof \Laralib\L5scaffold\Commands\ScaffoldMakeCommand,
+            'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'command.app.name' instanceof \Illuminate\Foundation\Console\AppNameCommand,
             'command.clear-compiled' instanceof \Illuminate\Foundation\Console\ClearCompiledCommand,
             'command.command.make' instanceof \Illuminate\Foundation\Console\CommandMakeCommand,
@@ -119,7 +121,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
-            'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
         ],
         \Illuminate\Contracts\Container\Container::make('') => [
             '' == '@',
@@ -131,7 +132,6 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Http\Kernel' instanceof \App\Http\Kernel,
             'Illuminate\Contracts\Console\Kernel' instanceof \App\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \App\Exceptions\Handler,
-            'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
             'auth' instanceof \Illuminate\Auth\AuthManager,
             'auth.driver' instanceof \Illuminate\Auth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
@@ -140,6 +140,7 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Queue\EntityResolver' instanceof \Illuminate\Database\Eloquent\QueueEntityResolver,
             'db.factory' instanceof \Illuminate\Database\Connectors\ConnectionFactory,
             'db' instanceof \Illuminate\Database\DatabaseManager,
+            'db.connection' instanceof \Illuminate\Database\MySqlConnection,
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
@@ -151,6 +152,8 @@ namespace PHPSTORM_META {
             'view.engine.resolver' instanceof \Illuminate\View\Engines\EngineResolver,
             'view.finder' instanceof \Illuminate\View\FileViewFinder,
             'view' instanceof \Illuminate\View\Factory,
+            'command.larascaf.scaffold' instanceof \Laralib\L5scaffold\Commands\ScaffoldMakeCommand,
+            'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'command.app.name' instanceof \Illuminate\Foundation\Console\AppNameCommand,
             'command.clear-compiled' instanceof \Illuminate\Foundation\Console\ClearCompiledCommand,
             'command.command.make' instanceof \Illuminate\Foundation\Console\CommandMakeCommand,
@@ -231,7 +234,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
-            'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
         ],
         \App::make('') => [
             '' == '@',
@@ -243,7 +245,6 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Http\Kernel' instanceof \App\Http\Kernel,
             'Illuminate\Contracts\Console\Kernel' instanceof \App\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \App\Exceptions\Handler,
-            'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
             'auth' instanceof \Illuminate\Auth\AuthManager,
             'auth.driver' instanceof \Illuminate\Auth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
@@ -252,6 +253,7 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Queue\EntityResolver' instanceof \Illuminate\Database\Eloquent\QueueEntityResolver,
             'db.factory' instanceof \Illuminate\Database\Connectors\ConnectionFactory,
             'db' instanceof \Illuminate\Database\DatabaseManager,
+            'db.connection' instanceof \Illuminate\Database\MySqlConnection,
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
@@ -263,6 +265,8 @@ namespace PHPSTORM_META {
             'view.engine.resolver' instanceof \Illuminate\View\Engines\EngineResolver,
             'view.finder' instanceof \Illuminate\View\FileViewFinder,
             'view' instanceof \Illuminate\View\Factory,
+            'command.larascaf.scaffold' instanceof \Laralib\L5scaffold\Commands\ScaffoldMakeCommand,
+            'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'command.app.name' instanceof \Illuminate\Foundation\Console\AppNameCommand,
             'command.clear-compiled' instanceof \Illuminate\Foundation\Console\ClearCompiledCommand,
             'command.command.make' instanceof \Illuminate\Foundation\Console\CommandMakeCommand,
@@ -343,7 +347,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
-            'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
         ],
         app('') => [
             '' == '@',
@@ -355,7 +358,6 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Http\Kernel' instanceof \App\Http\Kernel,
             'Illuminate\Contracts\Console\Kernel' instanceof \App\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \App\Exceptions\Handler,
-            'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
             'auth' instanceof \Illuminate\Auth\AuthManager,
             'auth.driver' instanceof \Illuminate\Auth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
@@ -364,6 +366,7 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Queue\EntityResolver' instanceof \Illuminate\Database\Eloquent\QueueEntityResolver,
             'db.factory' instanceof \Illuminate\Database\Connectors\ConnectionFactory,
             'db' instanceof \Illuminate\Database\DatabaseManager,
+            'db.connection' instanceof \Illuminate\Database\MySqlConnection,
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
@@ -375,6 +378,8 @@ namespace PHPSTORM_META {
             'view.engine.resolver' instanceof \Illuminate\View\Engines\EngineResolver,
             'view.finder' instanceof \Illuminate\View\FileViewFinder,
             'view' instanceof \Illuminate\View\Factory,
+            'command.larascaf.scaffold' instanceof \Laralib\L5scaffold\Commands\ScaffoldMakeCommand,
+            'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'command.app.name' instanceof \Illuminate\Foundation\Console\AppNameCommand,
             'command.clear-compiled' instanceof \Illuminate\Foundation\Console\ClearCompiledCommand,
             'command.command.make' instanceof \Illuminate\Foundation\Console\CommandMakeCommand,
@@ -455,7 +460,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
-            'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
         ],
     ];
 }

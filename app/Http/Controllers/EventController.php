@@ -2,10 +2,10 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Calendar;
+use App\Event;
 use Illuminate\Http\Request;
 
-class CalendarController extends Controller {
+class EventController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,9 +14,9 @@ class CalendarController extends Controller {
 	 */
 	public function index()
 	{
-		$calendars = Calendar::orderBy('id', 'desc')->paginate(10);
+		$events = Event::orderBy('id', 'desc')->paginate(10);
 
-		return view('calendars.index', compact('calendars'));
+		return view('event.index', compact('events'));
 	}
 
 	/**
@@ -26,7 +26,7 @@ class CalendarController extends Controller {
 	 */
 	public function create()
 	{
-		return view('calendars.create');
+		return view('event.create');
 	}
 
 	/**
@@ -37,13 +37,14 @@ class CalendarController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-		$calendar = new Calendar();
+		$event = new Event();
+        /**
+         * [...]
+         */
+		$event->save();
 
-
-
-		$calendar->save();
-
-		return redirect()->route('calendars.index')->with('message', 'Item created successfully.');
+		return redirect()->route('event.index')
+                         ->with('message', 'Item created successfully.');
 	}
 
 	/**
@@ -54,9 +55,9 @@ class CalendarController extends Controller {
 	 */
 	public function show($id)
 	{
-		$calendar = Calendar::findOrFail($id);
+		$event = Event::findOrFail($id);
 
-		return view('calendars.show', compact('calendar'));
+		return view('event.show', compact('event'));
 	}
 
 	/**
@@ -67,9 +68,9 @@ class CalendarController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$calendar = Calendar::findOrFail($id);
+		$event = Event::findOrFail($id);
 
-		return view('calendars.edit', compact('calendar'));
+		return view('event.edit', compact('event'));
 	}
 
 	/**
@@ -81,13 +82,14 @@ class CalendarController extends Controller {
 	 */
 	public function update(Request $request, $id)
 	{
-		$calendar = Calendar::findOrFail($id);
+		$event = Event::findOrFail($id);
 
 
 
-		$calendar->save();
+		$event->save();
 
-		return redirect()->route('calendars.index')->with('message', 'Item updated successfully.');
+		return redirect()->route('event.index')
+                         ->with('message', 'Item updated successfully.');
 	}
 
 	/**
@@ -98,10 +100,11 @@ class CalendarController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$calendar = Calendar::findOrFail($id);
-		$calendar->delete();
+		$event = Event::findOrFail($id);
+		$event->delete();
 
-		return redirect()->route('calendars.index')->with('message', 'Item deleted successfully.');
+		return redirect()->route('event.index')
+                         ->with('message', 'Item deleted successfully.');
 	}
 
 }

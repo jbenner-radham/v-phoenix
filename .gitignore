@@ -5,3 +5,4 @@ Homestead.json
 .env
 .vagrant
 *.bak
+.DS_Store
