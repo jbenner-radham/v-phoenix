@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('calendar', 'CalendarController');
+
 Route::resource('vcard', 'VCardController');

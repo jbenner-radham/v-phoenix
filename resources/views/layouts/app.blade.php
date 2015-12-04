@@ -45,7 +45,10 @@
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     </head>
     <body>
-        <main class="container">
+        <main>
+            <div class="ui stackable container menu">
+                <div class="item">vPhoenix</div>
+            </div>
             @yield('content')
         </main>
         <script src="/js/semantic.js"></script>

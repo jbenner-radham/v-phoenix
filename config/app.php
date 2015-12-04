@@ -154,7 +154,7 @@ return [
         /*
          * Vendor Service Providers...
          */
-        //-/ Laralib\L5scaffold\GeneratorsServiceProvider::class
+        Laralib\L5scaffold\GeneratorsServiceProvider::class
     ],
 
     /*
