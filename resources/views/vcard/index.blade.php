@@ -2,9 +2,13 @@
 
 @section('content')
 
-<div class="jumbotron">
-    <h1>VCard Index Yoz!</h1>
-    <p>Fo sho yolo or bolo.</p>
-</div>
+<h1>VCard Index Yoz!</h1>
+<p>Fo sho yolo or bolo.</p>
+
+@foreach($vcards as $vcard)
+    <li>
+        <a href="{{ route('vcard.show', $vcard->id) }}">{!! $vcard->given_name . ' ' . $vcard->family_name !!}</a>
+    </li>
+@endforeach
 
 @endsection

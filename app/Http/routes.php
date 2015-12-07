@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', ['as' => 'index', 'uses' => 'PagesController@index']);
 Route::resource('event', 'EventController');
 
 Route::resource('vcard', 'VCardController');

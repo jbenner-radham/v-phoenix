@@ -6,3 +6,4 @@ Homestead.json
 .vagrant
 *.bak
 .DS_Store
+.idea/
