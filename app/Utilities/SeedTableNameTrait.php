@@ -9,6 +9,7 @@ trait SeedTableNameTrait
     private static function _getTableName()
     {
         return Stringy::create(__CLASS__)->replace('TableSeeder', '')
+                                         ->underscored()
                                          ->toLowerCase();
     }
 }

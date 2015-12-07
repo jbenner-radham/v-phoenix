@@ -14,6 +14,7 @@ class CreateLeadSourcesTable extends Migration
     {
         Schema::create('lead_sources', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }

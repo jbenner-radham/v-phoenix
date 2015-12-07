@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Stringy\Stringy;
 use Symfony\Component\Yaml\Yaml;
 
-class VCardsTableSeeder extends Seeder
+class VcardsTableSeeder extends Seeder
 {
     use App\Utilities\SeedTableNameTrait;
 

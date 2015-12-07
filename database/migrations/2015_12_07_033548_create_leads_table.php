@@ -14,8 +14,12 @@ class CreateLeadsTable extends Migration
     {
         Schema::create('leads', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('include_packing');
             $table->longText('description');
+            $table->boolean('include_packing');
+            $table->integer('lead_sources_id')->unsigned();
+            $table->foreign('lead_sources_id')->references('id')->on('lead_sources');
+            $table->integer('lead_statuses_id')->unsigned();
+            $table->foreign('lead_statuses_id')->references('id')->on('lead_statuses');
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ class CreateLeadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::drop('leads');
     }
 }
