@@ -18,6 +18,14 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('format_tel', function ($tel) {
             return "<?=\Stringy\Stringy::create($tel)->replace('-', '.')?>";
         });
+
+        Blade::directive('get_gravatar_uri', function ($email) {
+            return "http://www.gravatar.com/avatar/<?=md5($email)?>?size=1024&default=identicon";
+        });
+
+        Blade::directive('get_default_gravatar_uri', function () {
+           return "http://www.gravatar.com/avatar/133713371337?size=1024&default=identicon";
+        });
     }
 
     /**

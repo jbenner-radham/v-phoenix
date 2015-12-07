@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.less","app.css"],"names":[],"mappings":"AAAA;EACI,cAAA;CCCH","file":"app.css","sourcesContent":["#content {\n    padding: 2rem;\n}\n","#content {\n  padding: 2rem;\n}\n"],"sourceRoot":"/source/"}

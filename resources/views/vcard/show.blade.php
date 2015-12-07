@@ -6,7 +6,11 @@
     <div class="ui card h-card">
         <div class="image">
             {{-- [Photo] --}}
-            <img class="u-photo" src="http://www.gravatar.com/avatar/{{ md5($vcard->email) }}?size=1024&default=identicon" alt="{{ $vcard->given_name }} {{ $vcard->family_name }}">
+            @if ($vcard->email)
+                <img class="u-photo" src="@get_gravatar_uri($vcard->email)" alt="{{ $vcard->given_name }} {{ $vcard->family_name }}">
+            @else
+                <img class="u-photo" src="@get_default_gravatar_uri()" alt="{{ $vcard->given_name }} {{ $vcard->family_name }}">
+            @endif
         </div>
         <div class="content">
             <div class="header">
@@ -30,10 +34,6 @@
                 @if ($vcard->extended_address)
                     <span class="p-extended-address">{{ $vcard->extended_address }}</span><br>
                 @endif
-
-
-                {{-- [Locality], [Region] [Postal Code] --}}
-                {{--<span class="p-locality">{{ $vcard->locality }}</span>, <span class="p-region">{{ $vcard->region }}</span> <span class="p-postal-code">{{ $vcard->postal_code }}</span><br>--}}
 
                 {{-- [Locality] --}}
                 @if ($vcard->locality)
@@ -63,7 +63,12 @@
         </div> <!-- .content -->
 
         <div class="extra content">
-            <span class="right floated">IGC Software&nbsp;<i class="fa fa-building"></i></span>
+            {{-- [Org] --}}
+            @if ($vcard->org)
+                <span class="right floated p-org">{{ $vcard->org }}&nbsp;<i class="icon building"></i></span>
+            @else
+                <span class="right floated">Person&nbsp;<i class="user icon"></i></span>
+            @endif
         </div> <!-- .extra.content -->
     </div>
 </div>

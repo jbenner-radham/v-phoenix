@@ -30,6 +30,7 @@ class CreateVcardsTable extends Migration
             $table->string('country_name');
             $table->string('extended_address');
             $table->string('locality');
+            $table->string('org');
             $table->string('postal_code');
             $table->string('region');
             $table->string('street_address');

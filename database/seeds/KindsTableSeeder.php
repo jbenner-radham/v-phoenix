@@ -1,9 +1,13 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Stringy\Stringy;
+use Symfony\Component\Yaml\Yaml;
 
 class KindsTableSeeder extends Seeder
 {
+    use App\Utilities\SeedTableNameTrait;
+
     /**
      * Run the database seeds.
      *
@@ -14,10 +18,10 @@ class KindsTableSeeder extends Seeder
      */
     public function run()
     {
-        $kinds = ['individual', 'group', 'org', 'location', 'device'];
+        $kinds = Yaml::parse(file_get_contents(__DIR__ . '/data/kinds.yaml'));
 
         foreach ($kinds as $kind) {
-            DB::table('kinds')->insert([
+            DB::table(self::_getTableName())->insert([
                 'name' => $kind
             ]);
         }

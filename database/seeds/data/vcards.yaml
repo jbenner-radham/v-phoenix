@@ -1,0 +1,17 @@
+# vCards
+---
+- email:          jbenner@igcsoftware.com
+  street_address: Suite 201
+  family_name:    Benner
+  given_name:     James
+  postal_code:    43068
+  street_address: 6432 E. Main St.
+  tel:            614.759.9148
+  title:          Product Developer
+  kind_id:        1 # [Individual]
+  org:            IGC Software
+
+- email:          james.benner@gmail.com
+  family_name:    Benner
+  given_name:     James
+  kind_id:        1 # [Individual]
