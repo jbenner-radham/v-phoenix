@@ -65,7 +65,7 @@
         <div class="extra content">
             {{-- [Org] --}}
             @if ($vcard->org)
-                <span class="right floated p-org">{{ $vcard->org }}&nbsp;<i class="icon building"></i></span>
+                <span class="right floated p-org">{{ $vcard->org }}&nbsp;<i class="building icon"></i></span>
             @else
                 <span class="right floated">Person&nbsp;<i class="user icon"></i></span>
             @endif
