@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Calendar Index Yoz!</h1>
+    <h1>Event Index Yoz!</h1>
     <p>Fo sho yolo or bolo.</p>
 
     @foreach($events as $event)
