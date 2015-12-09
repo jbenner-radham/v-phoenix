@@ -19,8 +19,9 @@ class CalendarController extends Controller
     {
         $day = Carbon::now()->startOfMonth();
         $days = new ArrayObject;
+        $daysInMonth = Carbon::now()->daysInMonth;
 
-        foreach (range(1, Carbon::now()->daysInMonth) as $dayOfMonth) {
+        foreach (range(1, $daysInMonth) as $dayOfMonth) {
             $days->offsetSet($dayOfMonth, clone $day);
             $day->addDay();
         }

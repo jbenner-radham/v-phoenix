@@ -5,7 +5,7 @@
     RFC 4647, September 2009; RFC 5646, September 2006,
     <http://www.rfc-editor.org/info/bcp47>.
 --}}
-<html lang="en" prefix="dcterms: http://purl.org/dc/terms/ og: http://ogp.me/ns#">
+<html lang="@yield('lang', 'en')" prefix="dcterms: http://purl.org/dc/terms/ og: http://ogp.me/ns#">
 
 @include('_includes.head')
 
