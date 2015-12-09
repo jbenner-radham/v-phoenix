@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: vphoenix
+        psr4_prefix: vphoenix
         src_path: app

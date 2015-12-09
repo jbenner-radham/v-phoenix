@@ -1,9 +1,9 @@
-<?php namespace App\Http\Controllers;
+<?php namespace vphoenix\Http\Controllers;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Kind;
-use App\VCard;
+use vphoenix\Http\Requests;
+use vphoenix\Http\Controllers\Controller;
+use vphoenix\Kind;
+use vphoenix\VCard;
 use Illuminate\Http\Request;
 
 class VCardController extends Controller {

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace vphoenix\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use vphoenix\Http\Requests;
+use vphoenix\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {

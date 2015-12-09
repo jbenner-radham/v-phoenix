@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Utilities;
+namespace vphoenix\Utilities;
 
 use Stringy\Stringy;
 

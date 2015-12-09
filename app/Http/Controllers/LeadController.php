@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace vphoenix\Http\Controllers;
 
-use App\BusinessLine;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use vphoenix\BusinessLine;
+use vphoenix\Http\Requests;
+use vphoenix\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class LeadController extends Controller
