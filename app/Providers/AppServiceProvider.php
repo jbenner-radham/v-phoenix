@@ -1,6 +1,6 @@
 <?php
 
-namespace vphoenix\Providers;
+namespace App\Providers;
 
 use Blade;
 use Illuminate\Support\ServiceProvider;

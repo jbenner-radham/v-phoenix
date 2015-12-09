@@ -1,8 +1,8 @@
-<?php namespace vphoenix\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
-use vphoenix\Http\Requests;
-use vphoenix\Http\Controllers\Controller;
-use vphoenix\Event;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Event;
 use Illuminate\Http\Request;
 
 class EventController extends Controller {

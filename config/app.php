@@ -140,10 +140,10 @@ return [
         /*
          * Application Service Providers...
          */
-        vphoenix\Providers\AppServiceProvider::class,
-        vphoenix\Providers\AuthServiceProvider::class,
-        vphoenix\Providers\EventServiceProvider::class,
-        vphoenix\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
 
         /*

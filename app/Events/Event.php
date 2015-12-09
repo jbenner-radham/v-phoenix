@@ -1,6 +1,6 @@
 <?php
 
-namespace vphoenix\Events;
+namespace App\Events;
 
 abstract class Event
 {

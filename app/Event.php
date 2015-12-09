@@ -1,11 +1,11 @@
 <?php
 
-namespace vphoenix;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * vphoenix\Event
+ * App\Event
  *
  * @property integer $id
  * @property string $description
@@ -15,16 +15,16 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $summary
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereDescription($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereEnd($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereStart($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereLocation($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereSummary($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereEnd($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereStart($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereLocation($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereSummary($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereUpdatedAt($value)
  * @property string $url
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Event whereUrl($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event whereUrl($value)
  */
 
 // see http://laravel.com/docs/5.1/eloquent#query-scopes

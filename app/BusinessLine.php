@@ -1,6 +1,6 @@
 <?php
 
-namespace vphoenix;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 

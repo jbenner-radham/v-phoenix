@@ -1,11 +1,11 @@
 <?php
 
-namespace vphoenix;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * vphoenix\VCard
+ * App\VCard
  *
  * @property integer $id
  * @property string $email
@@ -21,22 +21,22 @@ use Illuminate\Database\Eloquent\Model;
  * @property integer $kind_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereEmail($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereFamilyName($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereGivenName($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereTitle($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereCountryName($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereExtendedAddress($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereLocality($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard wherePostalCode($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereRegion($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereStreetAddress($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereKindId($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereFamilyName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereGivenName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereCountryName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereExtendedAddress($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereLocality($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard wherePostalCode($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereRegion($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereStreetAddress($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereKindId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereUpdatedAt($value)
  * @property string $tel
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\VCard whereTel($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereTel($value)
  */
 class VCard extends Model
 {

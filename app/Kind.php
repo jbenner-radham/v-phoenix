@@ -1,16 +1,16 @@
 <?php
 
-namespace vphoenix;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * vphoenix\Kind
+ * App\Kind
  *
  * @property integer $id
  * @property string $name
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Kind whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\vphoenix\Kind whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Kind whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Kind whereName($value)
  */
 class Kind extends Model
 {

@@ -34,7 +34,7 @@
             "database"
         ],
         "psr-4": {
-            "vphoenix\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

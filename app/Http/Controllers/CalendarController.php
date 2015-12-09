@@ -1,9 +1,9 @@
 <?php
 
-namespace vphoenix\Http\Controllers;
+namespace App\Http\Controllers;
 
-use vphoenix\Http\Requests;
-use vphoenix\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 use ArrayObject;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
