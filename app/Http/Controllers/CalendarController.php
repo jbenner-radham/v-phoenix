@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use ArrayObject;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -17,10 +18,10 @@ class CalendarController extends Controller
     public function index()
     {
         $day = Carbon::now()->startOfMonth();
-        $days = [];
+        $days = new ArrayObject;
 
         foreach (range(1, Carbon::now()->daysInMonth) as $dayOfMonth) {
-            $days[$dayOfMonth] = clone $day;
+            $days->offsetSet($dayOfMonth, clone $day);
             $day->addDay();
         }
 
