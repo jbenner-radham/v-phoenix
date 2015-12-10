@@ -7,7 +7,7 @@
 
     @foreach($events as $event)
         <li>
-            <a href="{{ route('event.show', $event->id) }}">{!! $event->description !!}</a>
+            <a href="{{ route('events.show', $event->id) }}">{!! $event->description !!}</a>
         </li>
     @endforeach
 

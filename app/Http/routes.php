@@ -12,7 +12,7 @@
 */
 
 Route::get('/', ['as' => 'index', 'uses' => 'PagesController@index']);
-Route::resource('calendar', 'CalendarController');
-Route::resource('event', 'EventController');
-Route::resource('lead', 'LeadController');
-Route::resource('vcard', 'VCardController');
+Route::resource('calendars', 'CalendarController');
+Route::resource('events', 'EventController');
+Route::resource('leads', 'LeadController');
+Route::resource('vcards', 'VCardController');

@@ -26,7 +26,7 @@ class CalendarController extends Controller
             $day->addDay();
         }
 
-        return view('calendar.index', compact('days'));
+        return view('calendars.index', compact('days'));
     }
 
     /**

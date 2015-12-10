@@ -32,7 +32,7 @@ class LeadController extends Controller
         $lead_sources   = LeadSource::all();
         $lead_statuses  = LeadStatus::all();
 
-        return view('lead.create', compact('business_lines', 'lead_sources', 'lead_statuses'));
+        return view('leads.create', compact('business_lines', 'lead_sources', 'lead_statuses'));
     }
 
     /**

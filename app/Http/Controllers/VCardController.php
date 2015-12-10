@@ -17,7 +17,7 @@ class VCardController extends Controller {
 	{
 		$vcards = VCard::orderBy('id', 'desc')->paginate(10);
 
-		return view('vcard.index', compact('vcards'));
+		return view('vcards.index', compact('vcards'));
 	}
 
 	/**
@@ -29,7 +29,7 @@ class VCardController extends Controller {
 	{
         $types = Kind::all();
 
-		return view('vcard.create', compact('types'));
+		return view('vcards.create', compact('types'));
 	}
 
 	/**
@@ -54,7 +54,7 @@ class VCardController extends Controller {
         $vcard->kind_id          = $request->kind_id;
         $vcard->save();
 
-        return redirect()->route('vcard.index')
+        return redirect()->route('vcards.index')
                          ->with('message', 'Item created successfully.');
 	}
 
@@ -68,7 +68,7 @@ class VCardController extends Controller {
 	{
 		$vcard = VCard::findOrFail($id);
 
-		return view('vcard.show', compact('vcard'));
+		return view('vcards.show', compact('vcard'));
 	}
 
 	/**
@@ -81,7 +81,7 @@ class VCardController extends Controller {
 	{
 		$vcard = VCard::findOrFail($id);
 
-		return view('vcard.edit', compact('vcard'));
+		return view('vcards.edit', compact('vcard'));
 	}
 
 	/**
@@ -97,7 +97,7 @@ class VCardController extends Controller {
 
 		$vcard->save();
 
-		return redirect()->route('vcard.index')->with('message', 'Item updated successfully.');
+		return redirect()->route('vcards.index')->with('message', 'Item updated successfully.');
 	}
 
 	/**
@@ -111,7 +111,7 @@ class VCardController extends Controller {
 		$vcard = VCard::findOrFail($id);
 		$vcard->delete();
 
-		return redirect()->route('vcard.index')->with('message', 'Item deleted successfully.');
+		return redirect()->route('vcards.index')->with('message', 'Item deleted successfully.');
 	}
 
 }

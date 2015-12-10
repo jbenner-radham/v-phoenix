@@ -7,7 +7,7 @@
 
 @foreach($vcards as $vcard)
     <li>
-        <a href="{{ route('vcard.show', $vcard->id) }}">{!! $vcard->given_name . ' ' . $vcard->family_name !!}</a>
+        <a href="{{ route('vcards.show', $vcard->id) }}">{!! $vcard->given_name . ' ' . $vcard->family_name !!}</a>
     </li>
 @endforeach
 

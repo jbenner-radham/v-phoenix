@@ -16,7 +16,7 @@ class EventController extends Controller {
 	{
 		$events = Event::orderBy('id', 'desc')->paginate(10);
 
-		return view('event.index', compact('events'));
+		return view('events.index', compact('events'));
 	}
 
 	/**
@@ -26,7 +26,7 @@ class EventController extends Controller {
 	 */
 	public function create()
 	{
-		return view('event.create');
+		return view('events.create');
 	}
 
 	/**
@@ -43,7 +43,7 @@ class EventController extends Controller {
          */
 		$event->save();
 
-		return redirect()->route('event.index')
+		return redirect()->route('events.index')
                          ->with('message', 'Item created successfully.');
 	}
 
@@ -57,7 +57,7 @@ class EventController extends Controller {
 	{
 		$event = Event::findOrFail($id);
 
-		return view('event.show', compact('event'));
+		return view('events.show', compact('event'));
 	}
 
 	/**
@@ -70,7 +70,7 @@ class EventController extends Controller {
 	{
 		$event = Event::findOrFail($id);
 
-		return view('event.edit', compact('event'));
+		return view('events.edit', compact('event'));
 	}
 
 	/**
@@ -88,7 +88,7 @@ class EventController extends Controller {
 
 		$event->save();
 
-		return redirect()->route('event.index')
+		return redirect()->route('events.index')
                          ->with('message', 'Item updated successfully.');
 	}
 
@@ -103,7 +103,7 @@ class EventController extends Controller {
 		$event = Event::findOrFail($id);
 		$event->delete();
 
-		return redirect()->route('event.index')
+		return redirect()->route('events.index')
                          ->with('message', 'Item deleted successfully.');
 	}
 

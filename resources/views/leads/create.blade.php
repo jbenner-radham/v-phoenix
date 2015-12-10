@@ -20,7 +20,7 @@
             @foreach ($business_lines as $business_line)
                 <option value="{{ $business_line->id }}">@titleize($business_line->name)</option>
             @endforeach
-        <select>
+        </select>
     </label>
 
     <br>
@@ -32,7 +32,7 @@
             @foreach ($lead_sources as $lead_source)
                 <option value="{{ $lead_source->id }}">@titleize($lead_source->name)</option>
             @endforeach
-        <select>
+        </select>
     </label>
 
     <br>
@@ -44,7 +44,7 @@
             @foreach ($lead_statuses as $lead_status)
                 <option value="{{ $lead_status->id }}">@titleize($lead_status->name)</option>
             @endforeach
-        <select>
+        </select>
     </label>
 
     <br>

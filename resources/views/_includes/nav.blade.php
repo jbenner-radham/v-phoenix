@@ -11,10 +11,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{ route('vcard.index') }}">vCards</a>
-                <li><a href="{{ route('event.index') }}">Events</a>
-                <li><a href="{{ route('calendar.index') }}">Calendar</a>
-                <li><a href="{{ route('lead.index') }}">Leads</a>
+                <li><a href="{{ route('vcards.index') }}">vCards</a>
+                <li><a href="{{ route('events.index') }}">Events</a>
+                <li><a href="{{ route('calendars.index') }}">Calendar</a>
+                <li><a href="{{ route('leads.index') }}">Leads</a>
             </ul>
         </div>
     </div>
