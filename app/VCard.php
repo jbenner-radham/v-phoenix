@@ -37,6 +37,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\VCard whereUpdatedAt($value)
  * @property string $tel
  * @method static \Illuminate\Database\Query\Builder|\App\VCard whereTel($value)
+ * @property string $org
+ * @method static \Illuminate\Database\Query\Builder|\App\VCard whereOrg($value)
  */
 class VCard extends Model
 {
