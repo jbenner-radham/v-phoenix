@@ -8,6 +8,11 @@
 
     <br>
 
+    {{-- [Email Opt Out] --}}
+    <label>Email Opt Out <input type="checkbox" name="email_opt_out"></label>
+
+    <br>
+
     {{-- [Business Line] --}}
     <label>
         Business Line
@@ -28,6 +33,14 @@
                 <option>@titleize($lead_source->name)</option>
             @endforeach
         <select>
+    </label>
+
+    <br>
+
+    {{-- [Description] --}}
+    <label>
+        Description
+        <textarea name="description"></textarea>
     </label>
 </div>
 
