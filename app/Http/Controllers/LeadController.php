@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\BusinessLine;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\LeadSource;
 use Illuminate\Http\Request;
 
 class LeadController extends Controller
@@ -27,8 +28,9 @@ class LeadController extends Controller
     public function create()
     {
         $business_lines = BusinessLine::all();
+        $lead_sources   = LeadSource::all();
 
-        return view('lead.create', compact('business_lines'));
+        return view('lead.create', compact('business_lines', 'lead_sources'));
     }
 
     /**

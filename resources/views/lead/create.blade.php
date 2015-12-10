@@ -17,6 +17,18 @@
             @endforeach
         <select>
     </label>
+
+    <br>
+
+    {{-- [Lead Source] --}}
+    <label>
+        Lead Source
+        <select name="lead-source">
+            @foreach ($lead_sources as $lead_source)
+                <option>@titleize($lead_source->name)</option>
+            @endforeach
+        <select>
+    </label>
 </div>
 
 @endsection

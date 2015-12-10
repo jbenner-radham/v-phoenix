@@ -14,6 +14,7 @@
                 <li><a href="{{ route('vcard.index') }}">vCards</a>
                 <li><a href="{{ route('event.index') }}">Events</a>
                 <li><a href="{{ route('calendar.index') }}">Calendar</a>
+                <li><a href="{{ route('lead.index') }}">Leads</a>
             </ul>
         </div>
     </div>
