@@ -37,6 +37,18 @@
 
     <br>
 
+    {{-- [Lead Status] --}}
+    <label>
+        Lead Status
+        <select name="lead-status">
+            @foreach ($lead_statuses as $lead_status)
+                <option value="{{ $lead_status->id }}">@titleize($lead_status->name)</option>
+            @endforeach
+        <select>
+    </label>
+
+    <br>
+
     {{-- [Description] --}}
     <label>
         Description

@@ -6,6 +6,7 @@ use App\BusinessLine;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\LeadSource;
+use App\LeadStatus;
 use Illuminate\Http\Request;
 
 class LeadController extends Controller
@@ -29,8 +30,9 @@ class LeadController extends Controller
     {
         $business_lines = BusinessLine::all();
         $lead_sources   = LeadSource::all();
+        $lead_statuses  = LeadStatus::all();
 
-        return view('lead.create', compact('business_lines', 'lead_sources'));
+        return view('lead.create', compact('business_lines', 'lead_sources', 'lead_statuses'));
     }
 
     /**
