@@ -18,7 +18,7 @@
         Business Line
         <select name="business-line">
             @foreach ($business_lines as $business_line)
-                <option>@titleize($business_line->name)</option>
+                <option value="{{ $business_line->id }}">@titleize($business_line->name)</option>
             @endforeach
         <select>
     </label>
@@ -30,7 +30,7 @@
         Lead Source
         <select name="lead-source">
             @foreach ($lead_sources as $lead_source)
-                <option>@titleize($lead_source->name)</option>
+                <option value="{{ $lead_source->id }}">@titleize($lead_source->name)</option>
             @endforeach
         <select>
     </label>
