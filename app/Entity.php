@@ -48,4 +48,13 @@ class Entity extends Model
      * @var string
      */
     protected $table = 'entities';
+
+    /**
+     * An Entity can have a kind
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function kind() {
+        return $this->hasOne('App\Kind');
+    }
 }

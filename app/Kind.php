@@ -14,5 +14,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Kind extends Model
 {
-    //
+    /**
+     * A Kind can have many Entities
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function entities()
+    {
+        return $this->hasMany('App\Entity');
+    }
 }
