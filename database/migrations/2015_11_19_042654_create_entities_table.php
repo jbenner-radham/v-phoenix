@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVcardsTable extends Migration
+class CreateEntitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,7 +17,7 @@ class CreateVcardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('vcards', function (Blueprint $table) {
+        Schema::create('entities', function (Blueprint $table) {
             $table->increments('id');
 
             // Entity
@@ -50,6 +50,6 @@ class CreateVcardsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vcards');
+        Schema::dropIfExists('entities');
     }
 }

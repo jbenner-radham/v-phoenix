@@ -4,8 +4,8 @@
 
 <div class="panel-body" vocab="http://microformats.org/profile/hcard">
     <!-- New VCard Form -->
-    <form action="/vcard" method="POST" class="form-horizontal">
-        <div class="vcard">
+    <form action="/entity" method="POST" class="form-horizontal">
+        <div class="entity">
 
             <!-- Email -->
             <label>
@@ -101,7 +101,7 @@
 
             {!! csrf_field() !!}
 
-            <!-- Add vCard Button -->
+            <!-- Add Entity Button -->
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-6">
                     <button type="submit" class="btn btn-default">
@@ -109,7 +109,7 @@
                     </button>
                 </div>
             </div>
-        </div> <!-- .vcard -->
+        </div> <!-- .Entity -->
     </form>
 </div>
 
