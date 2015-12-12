@@ -3,8 +3,10 @@
 @section('content')
 
 <div class="panel-body lead">
+    @include('_includes.form-elements.vcard')
+
     {{-- [Include Packing] --}}
-    @label(Include Packing <input type="checkbox" name="include_packing">)
+    <label>Include Packing <input type="checkbox" name="include_packing"></label>
 
     <br>
 

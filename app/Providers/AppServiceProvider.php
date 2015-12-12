@@ -27,6 +27,10 @@ class AppServiceProvider extends ServiceProvider
            return "http://www.gravatar.com/avatar/133713371337?size=1024&default=identicon";
         });
 
+        Blade::directive('label', function ($html) {
+            return "<label><?=$html?></label>";
+        });
+
         Blade::directive('titleize', function ($str) {
             return "<?=\Stringy\Stringy::create($str)->titleize()?>";
         });
