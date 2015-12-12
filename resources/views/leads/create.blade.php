@@ -4,7 +4,7 @@
 
 <div class="panel-body lead">
     {{-- [Include Packing] --}}
-    <label>Include Packing <input type="checkbox" name="include_packing"></label>
+    @label(Include Packing <input type="checkbox" name="include_packing">)
 
     <br>
 
