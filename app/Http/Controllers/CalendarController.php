@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use ArrayObject;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Temporal\Calendar;
 
 class CalendarController extends Controller
 {
@@ -17,14 +18,7 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        $day = Carbon::now()->startOfMonth();
-        $days = new ArrayObject;
-        $daysInMonth = Carbon::now()->daysInMonth;
-
-        foreach (range(1, $daysInMonth) as $dayOfMonth) {
-            $days->offsetSet($dayOfMonth, clone $day);
-            $day->addDay();
-        }
+        $days = Calendar::month();
 
         return view('calendars.index', compact('days'));
     }

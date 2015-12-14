@@ -19,7 +19,8 @@
         "phploc/phploc": "@stable",
         "semantic/ui": "^2.1",
         "nesbot/carbon": "^1.21",
-        "illuminate/html": "^5.0"
+        "illuminate/html": "^5.0",
+        "radioactivehamster/temporal": "^0.1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
