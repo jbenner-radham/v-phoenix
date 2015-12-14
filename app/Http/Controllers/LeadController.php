@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\BusinessLine;
 use App\Http\Requests;
+use App\Kind;
 use App\Http\Controllers\Controller;
 use App\LeadSource;
 use App\LeadStatus;
@@ -31,8 +32,9 @@ class LeadController extends Controller
         $business_lines = BusinessLine::all();
         $lead_sources   = LeadSource::all();
         $lead_statuses  = LeadStatus::all();
+        $kinds          = Kind::all();
 
-        return view('leads.create', compact('business_lines', 'lead_sources', 'lead_statuses'));
+        return view('leads.create', compact('business_lines', 'lead_sources', 'lead_statuses', 'kinds'));
     }
 
     /**

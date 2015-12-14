@@ -54,7 +54,8 @@ class Entity extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function kind() {
+    public function kind()
+    {
         return $this->hasOne('App\Kind');
     }
 }

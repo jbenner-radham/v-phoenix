@@ -13,7 +13,7 @@ class EntitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Entity::class, 'individual', 50)->create();
+        factory(App\Entity::class, 50)->create();
     }
 
 }

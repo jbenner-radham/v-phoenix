@@ -22,7 +22,7 @@
 
 
 
-$factory->defineAs(App\Entity::class, 'individual', function (\Faker\Generator $faker) {
+$factory->define(App\Entity::class, function (\Faker\Generator $faker) {
     return [
         'email'             => $faker->email,
         'family_name'       => $faker->lastName,

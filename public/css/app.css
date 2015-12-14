@@ -37,3 +37,8 @@
 .caret-container {
   float: right;
 }
+
+.vcard-label {
+  font-weight: inherit;
+  font-size: 16px;
+}
