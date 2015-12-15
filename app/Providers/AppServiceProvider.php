@@ -27,6 +27,10 @@ class AppServiceProvider extends ServiceProvider
            return "http://www.gravatar.com/avatar/133713371337?size=1024&default=identicon";
         });
 
+        Blade::directive('timestamp', function () {
+            return '<?=\Carbon\Carbon::create()->toIso8601String()?>';
+        });
+
         Blade::directive('label', function ($html) {
             return "<label><?=$html?></label>";
         });

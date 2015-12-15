@@ -19,6 +19,7 @@
         <li class="" role="presentation"><a href="{{ route('events.index') }}"><i class="calendar outline icon"></i> Events</a></li>
         <li class="" role="presentation"><a href="{{ route('calendars.index') }}"><i class="calendar icon"></i> Calendar</a></li>
         <li class="" role="presentation"><a href="{{ route('leads.index') }}"><i class="fire icon"></i> Leads</a></li>
+        <li class="" role="presentation"><a href="{{ route('opportunities.index') }}"><i class="money icon"></i> Opportunities</a></li>
 
         <li class="nav-divider">
 

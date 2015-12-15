@@ -20,7 +20,7 @@
         Revision 1.2, September 1997,
         <http://www.w3.org/TR/NOTE-datetime>.
     --}}
-    <meta property="dcterms:date:modified" content="@yield('modifiedTime')">
+    <meta property="dcterms:modified" content="@yield('modifiedTime', \Carbon\Carbon::now()->toW3cString())">
     <title>@yield('title')</title>
     {{--
         Ohye, M. and J. Kupke,

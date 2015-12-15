@@ -15,6 +15,7 @@
                 <li><a href="{{ route('events.index') }}">Events</a>
                 <li><a href="{{ route('calendars.index') }}">Calendar</a>
                 <li><a href="{{ route('leads.index') }}">Leads</a>
+                <li><a href="{{ route('opportunities.index') }}">Opportunities</a>
             </ul>
         </div>
     </div>

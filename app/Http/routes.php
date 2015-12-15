@@ -15,4 +15,5 @@ Route::get('/', ['as' => 'index', 'uses' => 'PagesController@index']);
 Route::resource('calendars', 'CalendarController');
 Route::resource('events', 'EventController');
 Route::resource('leads', 'LeadController');
+Route::resource('opportunities', 'OpportunityController');
 Route::resource('entities', 'EntityController');
