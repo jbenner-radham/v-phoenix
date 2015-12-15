@@ -154,7 +154,8 @@ return [
         /*
          * Vendor Service Providers...
          */
-        Laralib\L5scaffold\GeneratorsServiceProvider::class
+        Barryvdh\Debugbar\ServiceProvider::class
+        # Laralib\L5scaffold\GeneratorsServiceProvider::class
     ],
 
     /*
@@ -179,6 +180,7 @@ return [
         'Config'    => Illuminate\Support\Facades\Config::class,
         'Cookie'    => Illuminate\Support\Facades\Cookie::class,
         'Crypt'     => Illuminate\Support\Facades\Crypt::class,
+        'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         'DB'        => Illuminate\Support\Facades\DB::class,
         'Eloquent'  => Illuminate\Database\Eloquent\Model::class,
         'Event'     => Illuminate\Support\Facades\Event::class,
@@ -200,6 +202,7 @@ return [
         'Schema'    => Illuminate\Support\Facades\Schema::class,
         'Session'   => Illuminate\Support\Facades\Session::class,
         'Storage'   => Illuminate\Support\Facades\Storage::class,
+        'Stringy'   => Stringy\Stringy::class,
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
