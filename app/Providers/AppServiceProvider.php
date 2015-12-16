@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('timestamp', function () {
             return '<?=\Carbon::create()->toIso8601String()?>';
         });
-        
+
         Blade::directive('titleize', function ($str) {
             return "<?=\Stringy::create($str)->titleize(['at', 'by', 'for', 'in', 'of', 'on', 'or', 'out', 'to', 'the'])?>";
         });
