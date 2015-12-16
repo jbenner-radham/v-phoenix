@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::directive('format_tel', function ($tel) {
-            return "<?=\Stringy\Stringy::create($tel)->replace('-', '.')?>";
+            return "<?=\Stringy::create($tel)->replace('-', '.')?>";
         });
 
         Blade::directive('get_gravatar_uri', function ($email) {
@@ -28,15 +28,11 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Blade::directive('timestamp', function () {
-            return '<?=\Carbon\Carbon::create()->toIso8601String()?>';
+            return '<?=\Carbon::create()->toIso8601String()?>';
         });
-
-        Blade::directive('label', function ($html) {
-            return "<label><?=$html?></label>";
-        });
-
+        
         Blade::directive('titleize', function ($str) {
-            return "<?=\Stringy\Stringy::create($str)->titleize()?>";
+            return "<?=\Stringy::create($str)->titleize(['at', 'by', 'for', 'in', 'of', 'on', 'or', 'out', 'to', 'the'])?>";
         });
     }
 

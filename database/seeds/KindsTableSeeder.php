@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Stringy\Stringy;
 use Symfony\Component\Yaml\Yaml;
 
 class KindsTableSeeder extends Seeder

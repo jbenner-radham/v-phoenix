@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\SalesStage;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class OpportunityController extends Controller
+class SalesStageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +16,7 @@ class OpportunityController extends Controller
      */
     public function index()
     {
-        return view('opportunities.index');
+        //
     }
 
     /**
@@ -27,9 +26,7 @@ class OpportunityController extends Controller
      */
     public function create()
     {
-        $stages = SalesStage::all();
-
-        return view('opportunities.create', compact('stages'));
+        //
     }
 
     /**
