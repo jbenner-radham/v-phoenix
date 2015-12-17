@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Symfony\Component\Yaml\Yaml;
 
 class SalesStagesTableSeeder extends Seeder
 {
-    use App\Utilities\SeedTableNameTrait;
+    use App\Utilities\SeedTableTrait;
 
     /**
      * Run the database seeds.
@@ -14,7 +13,7 @@ class SalesStagesTableSeeder extends Seeder
      */
     public function run()
     {
-        $stages = Yaml::parse(file_get_contents(__DIR__ . '/data/sales_stages.yaml'));
+        $stages = self::_getSeedData();
 
         foreach ($stages as $stage) {
             DB::table(self::_getTableName())->insert([

@@ -6,7 +6,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class BusinessLinesTableSeeder extends Seeder
 {
-    use App\Utilities\SeedTableNameTrait;
+    use App\Utilities\SeedTableTrait;
 
     /**
      * Run the database seeds.
@@ -15,8 +15,7 @@ class BusinessLinesTableSeeder extends Seeder
      */
     public function run()
     {
-        $yaml = __DIR__ . '/data/' . self::_getTableName() . '.yaml';
-        $lines = Yaml::parse(file_get_contents($yaml));
+        $lines = self::_getSeedData();
 
         foreach ($lines as $line) {
             DB::table(self::_getTableName())->insert([

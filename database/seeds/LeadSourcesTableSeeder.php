@@ -2,11 +2,10 @@
 
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
-use Symfony\Component\Yaml\Yaml;
 
 class LeadSourcesTableSeeder extends Seeder
 {
-    use App\Utilities\SeedTableNameTrait;
+    use App\Utilities\SeedTableTrait;
 
     /**
      * Run the database seeds.
@@ -15,8 +14,7 @@ class LeadSourcesTableSeeder extends Seeder
      */
     public function run()
     {
-        $yaml = __DIR__ . '/data/' . self::_getTableName() . '.yaml';
-        $sources = Yaml::parse(file_get_contents($yaml));
+        $sources = self::_getSeedData();
 
         foreach ($sources as $source) {
             DB::table(self::_getTableName())->insert([

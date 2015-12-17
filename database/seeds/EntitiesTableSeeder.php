@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 
 class EntitiesTableSeeder extends Seeder
 {
-    use App\Utilities\SeedTableNameTrait;
+    use App\Utilities\SeedTableTrait;
 
     /**
      * Run the database seeds.

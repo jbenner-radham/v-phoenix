@@ -5,7 +5,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class KindsTableSeeder extends Seeder
 {
-    use App\Utilities\SeedTableNameTrait;
+    use App\Utilities\SeedTableTrait;
 
     /**
      * Run the database seeds.
@@ -17,7 +17,7 @@ class KindsTableSeeder extends Seeder
      */
     public function run()
     {
-        $kinds = Yaml::parse(file_get_contents(__DIR__ . '/data/kinds.yaml'));
+        $kinds = self::_getSeedData();
 
         foreach ($kinds as $kind) {
             DB::table(self::_getTableName())->insert([
