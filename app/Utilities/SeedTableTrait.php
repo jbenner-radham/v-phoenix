@@ -11,7 +11,7 @@ trait SeedTableTrait
      */
     protected static function _getSeedData()
     {
-        return Yaml::parseFile(__DIR__ . '/data/' . self::_getTableName() . '.yaml');
+        return Yaml::parseFile(database_path() . '/seeds/data/' . self::_getTableName() . '.yaml');
     }
 
     /**
