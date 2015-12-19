@@ -479,16 +479,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.5.2",
+            "version": "v1.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "47c7128262da274f590ae6f86eb137a7a64e82af"
+                "reference": "47cdc76ceb95cc591d9c79a36dc3794975b5d136"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/47c7128262da274f590ae6f86eb137a7a64e82af",
-                "reference": "47c7128262da274f590ae6f86eb137a7a64e82af",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/47cdc76ceb95cc591d9c79a36dc3794975b5d136",
+                "reference": "47cdc76ceb95cc591d9c79a36dc3794975b5d136",
                 "shasum": ""
             },
             "require": {
@@ -545,7 +545,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-12-03 10:50:37"
+            "time": "2015-12-19 05:03:47"
         },
         {
             "name": "doctrine/collections",
@@ -1707,22 +1707,22 @@
         },
         {
             "name": "laravel/installer",
-            "version": "v1.2.2",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/installer.git",
-                "reference": "705d1d3f1bc7fdd66d5b82267fbc46c86e0293b5"
+                "reference": "ce16e7a30f7a207b21ecdfa3311c2173b6889f0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/installer/zipball/705d1d3f1bc7fdd66d5b82267fbc46c86e0293b5",
-                "reference": "705d1d3f1bc7fdd66d5b82267fbc46c86e0293b5",
+                "url": "https://api.github.com/repos/laravel/installer/zipball/ce16e7a30f7a207b21ecdfa3311c2173b6889f0f",
+                "reference": "ce16e7a30f7a207b21ecdfa3311c2173b6889f0f",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "~4.0|~5.0|~6.0",
-                "symfony/console": "~2.3",
-                "symfony/process": "~2.3"
+                "symfony/console": "~2.3|~3.0",
+                "symfony/process": "~2.3|~3.0"
             },
             "bin": [
                 "laravel"
@@ -1747,7 +1747,7 @@
             "keywords": [
                 "laravel"
             ],
-            "time": "2015-11-13 17:41:49"
+            "time": "2015-12-19 20:54:30"
         },
         {
             "name": "league/climate",
@@ -1802,16 +1802,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.15",
+            "version": "1.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "31525caf9e8772683672fefd8a1ca0c0736020f4"
+                "reference": "183e1a610664baf6dcd6fceda415baf43cbdc031"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/31525caf9e8772683672fefd8a1ca0c0736020f4",
-                "reference": "31525caf9e8772683672fefd8a1ca0c0736020f4",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/183e1a610664baf6dcd6fceda415baf43cbdc031",
+                "reference": "183e1a610664baf6dcd6fceda415baf43cbdc031",
                 "shasum": ""
             },
             "require": {
@@ -1825,7 +1825,7 @@
                 "mockery/mockery": "~0.9",
                 "phpspec/phpspec": "^2.2",
                 "phpspec/prophecy-phpunit": "~1.0",
-                "phpunit/phpunit": "~4.1"
+                "phpunit/phpunit": "~4.8"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -1882,7 +1882,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-09-30 22:26:59"
+            "time": "2015-12-19 20:16:43"
         },
         {
             "name": "maximebf/debugbar",
@@ -4070,16 +4070,16 @@
         },
         {
             "name": "semantic/ui",
-            "version": "2.1.6",
+            "version": "2.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Semantic-Org/Semantic-UI.git",
-                "reference": "637471e86c1e44039c38ade112de64b7a349c1ef"
+                "reference": "5a07cef17e6409222a2c9acee15a2f9745bbd176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Semantic-Org/Semantic-UI/zipball/637471e86c1e44039c38ade112de64b7a349c1ef",
-                "reference": "637471e86c1e44039c38ade112de64b7a349c1ef",
+                "url": "https://api.github.com/repos/Semantic-Org/Semantic-UI/zipball/5a07cef17e6409222a2c9acee15a2f9745bbd176",
+                "reference": "5a07cef17e6409222a2c9acee15a2f9745bbd176",
                 "shasum": ""
             },
             "type": "library",
@@ -4103,7 +4103,7 @@
                 "semantic",
                 "ui"
             ],
-            "time": "2015-11-06 19:07:18"
+            "time": "2015-12-19 20:58:58"
         },
         {
             "name": "squizlabs/php_codesniffer",

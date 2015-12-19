@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\BusinessLine;
+use App\Entity;
 use App\Http\Requests;
 use App\Kind;
-use App\Http\Controllers\Controller;
+use App\Lead;
 use App\LeadSource;
 use App\LeadStatus;
+use Carbon;
 use Illuminate\Http\Request;
 
 class LeadController extends Controller
@@ -59,8 +61,17 @@ class LeadController extends Controller
         $entity->kind_id          = $request->kind_id;
         $entity->save();
 
-        return redirect()->route('entities.index')
-            ->with('message', 'Item created successfully.');
+        $lead = new Lead;
+        $lead->description       = $request->description;
+        $lead->email_opt_out     = $request->email_opt_out;
+        $lead->include_packing   = $request->include_packing;
+        $lead->lead_sources_id   = $request->lead_sources_id;
+        $lead->lead_statuses_id  = $request->lead_statuses_id;
+        $lead->created_at        = Carbon::now;
+        $lead->save();
+
+        return redirect()->route('leads.index')
+                         ->with('message', 'Lead created successfully.');
     }
 
     /**

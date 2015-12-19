@@ -39,6 +39,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Entity whereTel($value)
  * @property string $org
  * @method static \Illuminate\Database\Query\Builder|\App\Entity whereOrg($value)
+ * @property-read \App\Kind $kind
  */
 class Entity extends Model
 {
