@@ -47,7 +47,6 @@ class LeadController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
         $entity = new Entity;
         $entity->email            = $request->email;
         $entity->family_name      = $request->family_name;

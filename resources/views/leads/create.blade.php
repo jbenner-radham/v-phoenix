@@ -15,7 +15,7 @@
                     <label for="include_packing" class="col-sm-3 control-label vcard-label">Include Packing</label>
                     <div class="col-sm-9">
                         <div class="checkbox">
-                            
+
                             {{-- @todo Fix the visual regression that occurs when this redundant `label` element is removed. --}}
                             <label>
                                 <input type="checkbox" id="include_packing" name="include_packing">
