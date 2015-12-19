@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="panel-body lead">
-    <form action="/leads" method="POST"  class="form-horizontal">
+    <form action="{{ route('leads.store') }}" method="POST" class="form-horizontal">
         {{-- [vCard] --}}
         @include('_includes.forms.vcard')
 
@@ -15,8 +15,10 @@
                     <label for="include_packing" class="col-sm-3 control-label vcard-label">Include Packing</label>
                     <div class="col-sm-9">
                         <div class="checkbox">
+                            
+                            {{-- @todo Fix the visual regression that occurs when this redundant `label` element is removed. --}}
                             <label>
-                                <input type="checkbox" name="include_packing">
+                                <input type="checkbox" id="include_packing" name="include_packing">
                             </label>
                         </div>
                     </div>
@@ -24,8 +26,10 @@
                     <label for="email_opt_out" class="col-sm-3 control-label vcard-label">Email Opt Out</label>
                     <div class="col-sm-9">
                         <div class="checkbox">
+
+                            {{-- @todo Fix the visual regression that occurs when this redundant `label` element is removed. --}}
                             <label>
-                                <input type="checkbox" name="email_opt_out">
+                                <input type="checkbox" id="email_opt_out" name="email_opt_out">
                             </label>
                         </div>
                     </div>
@@ -47,7 +51,7 @@
             <div class="form-group">
                 <label for="lead-source" class="col-sm-3 control-label vcard-label">Lead Source</label>
                 <div class="col-sm-9">
-                    <select class="form-control" name="lead-source">
+                    <select class="form-control" id="lead-source" name="lead_sources_id">
                         <option selected disabled>Choose ...</option>
                         @foreach ($lead_sources as $lead_source)
                             <option value="{{ $lead_source->id }}">@titleize($lead_source->name)</option>
@@ -59,7 +63,7 @@
             <div class="form-group">
                 <label for="lead-status" class="col-sm-3 control-label vcard-label">Lead Status</label>
                 <div class="col-sm-9">
-                    <select class="form-control" name="lead-status">
+                    <select class="form-control" id="lead-status" name="lead_statuses_id">
                         <option selected disabled>Choose ...</option>
                         @foreach ($lead_statuses as $lead_status)
                             <option value="{{ $lead_status->id }}">@titleize($lead_status->name)</option>
@@ -71,7 +75,7 @@
             <div class="form-group">
                 <label for="description" class="col-sm-3 control-label vcard-label">Description</label>
                 <div class="col-sm-9">
-                    <textarea class="form-control custom-control" rows="3" style="resize:none"></textarea>
+                    <textarea class="form-control custom-control" name="description" rows="3" style="resize:none"></textarea>
                 </div>
             </div>
 

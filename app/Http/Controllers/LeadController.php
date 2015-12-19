@@ -47,6 +47,7 @@ class LeadController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
         $entity = new Entity;
         $entity->email            = $request->email;
         $entity->family_name      = $request->family_name;
@@ -63,11 +64,11 @@ class LeadController extends Controller
 
         $lead = new Lead;
         $lead->description       = $request->description;
-        $lead->email_opt_out     = $request->email_opt_out;
+        $lead->email_opt_out     = $request->input('email_opt_out', 'off');
         $lead->include_packing   = $request->include_packing;
         $lead->lead_sources_id   = $request->lead_sources_id;
         $lead->lead_statuses_id  = $request->lead_statuses_id;
-        $lead->created_at        = Carbon::now;
+        $lead->created_at        = Carbon::now();
         $lead->save();
 
         return redirect()->route('leads.index')
