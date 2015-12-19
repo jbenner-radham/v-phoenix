@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="panel-body lead">
-    <form class="form-horizontal">
+    <form action="/leads" method="POST"  class="form-horizontal">
         {{-- [vCard] --}}
         @include('_includes.forms.vcard')
 
@@ -74,6 +74,9 @@
                     <textarea class="form-control custom-control" rows="3" style="resize:none"></textarea>
                 </div>
             </div>
+
+            {!! csrf_field() !!}
+
             {{-- [Create/Submit Button] --}}
             <div class="col-sm-offset-3">
                 <button type="submit" class="col-sm-9 btn btn-primary btn-block">Create</button>

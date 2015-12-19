@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  * @method static \Illuminate\Database\Query\Builder|\App\Kind whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Kind whereName($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Entity[] $entities
  */
 class Kind extends Model
 {
