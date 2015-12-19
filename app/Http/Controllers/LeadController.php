@@ -64,7 +64,7 @@ class LeadController extends Controller
         $lead = new Lead;
         $lead->description       = $request->description;
         $lead->email_opt_out     = $request->input('email_opt_out', 'off');
-        $lead->include_packing   = $request->include_packing;
+        $lead->include_packing   = $request->input('include_packing', 'off');
         $lead->lead_sources_id   = $request->lead_sources_id;
         $lead->lead_statuses_id  = $request->lead_statuses_id;
         $lead->created_at        = Carbon::now();
