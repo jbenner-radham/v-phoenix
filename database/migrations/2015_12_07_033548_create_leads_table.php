@@ -14,6 +14,8 @@ class CreateLeadsTable extends Migration
     {
         Schema::create('leads', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('entity_id')->unsigned();
+            $table->foreign('entity_id')->references('id')->on('entities');
             $table->longText('description');
             $table->boolean('email_opt_out');
             $table->boolean('include_packing');

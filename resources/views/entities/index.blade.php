@@ -2,15 +2,35 @@
 
 @section('content')
 
-<h1>Entity Index Yoz!</h1>
+<h1>All Entities</h1>
 <p>Fo sho yolo or bolo.</p>
 
-@foreach($entities as $entity)
-    <li>
-        <a href="{{ route('entities.show', $entity->id) }}">
-            {!! $entity->given_name . ' ' . $entity->family_name !!}
-        </a>
-    </li>
-@endforeach
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach($entities as $entity)
+        <tr>
+            <td>
+                <a href="{{ route('entities.show', $entity->id) }}">
+                    {!! $entity->given_name . ' ' . $entity->family_name !!}
+                </a>
+            </td>
+            <td>{!! $entity->email !!}</td>
+            <td>{{ $entity->kind->name }}</td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>
+
+<div class="text-center">
+    {!! $entities->render() !!}
+</div>
+
 
 @endsection

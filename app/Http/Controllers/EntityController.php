@@ -15,7 +15,11 @@ class EntityController extends Controller {
 	 */
 	public function index()
 	{
-		$entities = Entity::orderBy('id', 'desc')->paginate(10);
+		// eager loading the 'kind' relationship to
+		// reduce the number of queries called in the view
+		$entities = Entity::with(['kind' => function ($query) {
+			$query->orderBy('id', 'desc');
+		}])->paginate(20);
 
 		return view('entities.index', compact('entities'));
 	}
@@ -27,9 +31,9 @@ class EntityController extends Controller {
 	 */
 	public function create()
 	{
-        $types = Kind::all();
+        $kinds = Kind::all();
 
-		return view('entities.create', compact('types'));
+		return view('entities.create', compact('kinds'));
 	}
 
 	/**

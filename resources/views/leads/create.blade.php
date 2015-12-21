@@ -4,6 +4,8 @@
 
 <div class="panel-body lead">
     <form action="{{ route('leads.store') }}" method="POST" class="form-horizontal">
+        {!! csrf_field() !!}
+
         {{-- [vCard] --}}
         @include('_includes.forms.vcard')
 
@@ -78,8 +80,6 @@
                     <textarea class="form-control custom-control" name="description" rows="3" style="resize:none"></textarea>
                 </div>
             </div>
-
-            {!! csrf_field() !!}
 
             {{-- [Create/Submit Button] --}}
             <div class="col-sm-offset-3">

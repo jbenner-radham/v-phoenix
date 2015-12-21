@@ -57,6 +57,6 @@ class Entity extends Model
      */
     public function kind()
     {
-        return $this->hasOne('App\Kind');
+        return $this->hasOne('App\Kind', 'id', 'kind_id');
     }
 }

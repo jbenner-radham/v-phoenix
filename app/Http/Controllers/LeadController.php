@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\BusinessLine;
-use App\Entity;
-use App\Http\Requests;
+use Carbon;
 use App\Kind;
 use App\Lead;
+use App\Entity;
 use App\LeadSource;
 use App\LeadStatus;
-use Carbon;
+use App\BusinessLine;
+use App\Http\Requests;
 use Illuminate\Http\Request;
 
 class LeadController extends Controller
@@ -67,7 +67,8 @@ class LeadController extends Controller
         $lead->include_packing   = $request->input('include_packing', 'off');
         $lead->lead_sources_id   = $request->lead_sources_id;
         $lead->lead_statuses_id  = $request->lead_statuses_id;
-        $lead->created_at        = Carbon::now();
+        $lead->entity_id         = $entity->id;
+        //$lead->created_at        = Carbon::now();
         $lead->save();
 
         return redirect()->route('leads.index')

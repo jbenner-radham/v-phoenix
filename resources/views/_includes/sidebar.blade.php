@@ -8,7 +8,8 @@
                 <div class="caret-container"><span class="caret arrow"></span></div>
             </a>
             <ul class="nav nav-pills nav-stacked collapse collapse-parent" id="entities">
-                <li class="sub-pill" role="presentation"><a href="{{ route('entities.index') }}">Individuals</a></li>
+                <li class="sub-pill" role="presentation"><a href="{{ route('entities.index') }}">All</a></li>
+                <li class="sub-pill" role="presentation"><a href="#">Individuals</a></li>
                 <li class="sub-pill" role="presentation"><a href="#">Groups</a></li>
                 <li class="sub-pill" role="presentation"><a href="#">Organizations</a></li>
                 <li class="sub-pill" role="presentation"><a href="#">Locations</a></li>
