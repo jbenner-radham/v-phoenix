@@ -1,2 +1,38 @@
 
 /*# sourceMappingURL=app.css.map */
+
+/* Sidebar Nav Pills
+---------------------------------- */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a:hover {
+    background-color: #55acee;
+}
+
+.nav-pills > li > a {
+    border-radius: 0;
+    padding: 8px 20px;
+    border: 1px solid #cacaca;
+    color: #666666;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.sub-pill {
+    width: 80%;
+}
+
+.collapse-parent > li:first-child {
+    margin-top: 2px;
+}
+
+.caret-container {
+    float: right;
+}
+
+.vcard-label {
+    font-weight: inherit;
+    font-size: 16px;
+}
