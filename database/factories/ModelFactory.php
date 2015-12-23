@@ -1,28 +1,8 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| Here you may define all of your model factories. Model factories give
-| you a convenient way to create models for testing and seeding your
-| database. Just tell the factory how a default model should look.
-|
-*/
+use Faker\Generator;
 
-//$factory->define(App\User::class, function (Faker\Generator $faker) {
-//    return [
-//        'name' => $faker->name,
-//        'email' => $faker->email,
-//        'password' => bcrypt(str_random(10)),
-//        'remember_token' => str_random(10),
-//    ];
-//});
-
-
-
-$factory->define(App\Entity::class, function (\Faker\Generator $faker) {
+$factory->define(App\Entity::class, function (Generator $faker) {
     return [
         'email'             => $faker->email,
         'family_name'       => $faker->lastName,
@@ -34,6 +14,18 @@ $factory->define(App\Entity::class, function (\Faker\Generator $faker) {
         'street_address'    => $faker->streetAddress,
         'locality'          => $faker->locale,
         'tel'               => $faker->phoneNumber,
-        'kind_id'           => 1
+        'kind_id'           => $faker->numberBetween(1,5)
+    ];
+});
+
+$factory->define(App\Lead::class, function (Generator $faker) {
+
+    return [
+        'description'       => $faker->paragraph(3),
+        'email_opt_out'     => $faker->numberBetween(0,1),
+        'include_packing'   => $faker->numberBetween(0,1),
+        'entity_id'         => $faker->numberBetween(1,50),
+        'lead_sources_id'   => $faker->numberBetween(1,12),
+        'lead_statuses_id'  => $faker->numberBetween(1,11)
     ];
 });

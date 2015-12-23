@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LeadSourcesTableSeeder::class);
         $this->call(LeadStatusesTableSeeder::class);
         $this->call(SalesStagesTableSeeder::class);
+        $this->call(LeadsTableSeeder::class);
 
         Model::reguard();
     }
