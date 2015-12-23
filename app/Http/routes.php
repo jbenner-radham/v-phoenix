@@ -13,6 +13,9 @@
 
 Route::get('/', ['as' => 'index', 'uses' => 'PagesController@index']);
 
+
+// Entity 'Kinds'
+// **********
 Route::get('entities/individuals', ['as' => 'individuals', 'uses' => 'EntityController@individualsIndex']);
 Route::get('entities/groups', ['as' => 'groups', 'uses' => 'EntityController@groupsIndex']);
 Route::get('entities/locations', ['as' => 'locations', 'uses' => 'EntityController@locationsIndex']);

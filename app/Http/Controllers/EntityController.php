@@ -1,17 +1,17 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\Kind;
 use App\Entity;
+use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class EntityController extends Controller {
 
 	/**
-	 * Display a listing of the resource.
+	 * Display entities... all 'kinds'
 	 *
-	 * @return Response
+	 *  @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
 	 */
 	public function index()
 	{
@@ -24,30 +24,59 @@ class EntityController extends Controller {
 		return view('entities.index', compact('entities'));
 	}
 
+	/**
+	 * Display entities of kind 'individual'
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
 	public function individualsIndex()
 	{
 		$entities = Entity::whereKindId(1)->orderBy('family_name', 'asc')->paginate(20);
 
 		return view('entities.individuals', compact('entities'));
 	}
+
+	/**
+	 * Display entities of kind 'group'
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
 	public function groupsIndex()
 	{
 		$entities = Entity::whereKindId(2)->orderBy('family_name', 'asc')->paginate(20);
 
 		return view('entities.groups', compact('entities'));
 	}
+
+	/**
+	 * Display entities of kind 'organization'
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
 	public function organizationsIndex()
 	{
 		$entities = Entity::whereKindId(3)->orderBy('family_name', 'asc')->paginate(20);
 
 		return view('entities.organizations', compact('entities'));
 	}
+
+	/**
+	 * Display entities of kind 'location'
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
 	public function locationsIndex()
 	{
 		$entities = Entity::whereKindId(4)->orderBy('family_name', 'asc')->paginate(20);
 
 		return view('entities.locations', compact('entities'));
 	}
+
+	/**
+	 * Display entities of kind 'device'
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
 	public function devicesIndex()
 	{
 		$entities = Entity::whereKindId(5)->orderBy('family_name', 'asc')->paginate(20);
@@ -94,7 +123,7 @@ class EntityController extends Controller {
 	}
 
 	/**
-	 * Display the specified resource.
+	 * Display an individual entity record
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -107,7 +136,7 @@ class EntityController extends Controller {
 	}
 
 	/**
-	 * Show the form for editing the specified resource.
+	 * Show the form for editing an entity
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -120,7 +149,7 @@ class EntityController extends Controller {
 	}
 
 	/**
-	 * Update the specified resource in storage.
+	 * Update the specified entity in storage.
 	 *
 	 * @param  int  $id
 	 * @param Request $request
@@ -136,7 +165,7 @@ class EntityController extends Controller {
 	}
 
 	/**
-	 * Remove the specified resource from storage.
+	 * Remove the specified entity from storage.
 	 *
 	 * @param  int  $id
 	 * @return Response

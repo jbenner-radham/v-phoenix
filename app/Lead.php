@@ -26,8 +26,33 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Lead extends Model
 {
+    /**
+     * A lead is/has an entity record
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function entity()
     {
-        return $this->hasOne('App\Entity');
+        return $this->hasOne('App\Entity', 'id', 'entity_id');
+    }
+
+    /**
+     * A lead has a source
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function source()
+    {
+        return $this->hasOne('App\LeadSource', 'id', 'lead_sources_id');
+    }
+
+    /**
+     * A lead has a status
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function status()
+    {
+        return $this->hasOne('App\LeadStatus', 'id', 'lead_statuses_id');
     }
 }

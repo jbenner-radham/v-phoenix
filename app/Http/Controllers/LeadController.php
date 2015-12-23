@@ -15,17 +15,21 @@ use Illuminate\Http\Request;
 class LeadController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of all Leads
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('leads.index');
+        $leads = Lead::with(
+            ['entity' => function ($query) {
+                $query->orderBy('id');
+            }])->paginate(20);
+        return view('leads.index', compact('leads'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new lead
      *
      * @return \Illuminate\Http\Response
      */
@@ -40,7 +44,7 @@ class LeadController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created lead in storage
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -68,7 +72,6 @@ class LeadController extends Controller
         $lead->lead_sources_id   = $request->lead_sources_id;
         $lead->lead_statuses_id  = $request->lead_statuses_id;
         $lead->entity_id         = $entity->id;
-        //$lead->created_at        = Carbon::now();
         $lead->save();
 
         return redirect()->route('leads.index')
@@ -76,18 +79,20 @@ class LeadController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified Lead.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $lead = Lead::with(['entity'])->findOrFail($id);
+
+        return view('leads.show', compact('lead'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified Lead.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -98,7 +103,7 @@ class LeadController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified Lead in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -110,7 +115,7 @@ class LeadController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified Lead from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
