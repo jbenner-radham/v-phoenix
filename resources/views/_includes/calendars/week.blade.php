@@ -1,4 +1,7 @@
-{{-- @link http://www.w3.org/TR/html5/tabular-data.html --}}
+{{--
+    @link http://www.w3.org/TR/html5/tabular-data.html
+    @link http://accessibility.psu.edu/tableshtml/
+--}}
 <table aria-describedby="week" role="presentation">
     <thead>
         <th scope="col" id="sunday">    Sunday
