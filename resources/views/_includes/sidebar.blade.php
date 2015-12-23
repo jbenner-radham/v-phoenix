@@ -9,11 +9,11 @@
             </a>
             <ul class="nav nav-pills nav-stacked collapse collapse-parent" id="entities">
                 <li class="sub-pill" role="presentation"><a href="{{ route('entities.index') }}">All</a></li>
-                <li class="sub-pill" role="presentation"><a href="#">Individuals</a></li>
-                <li class="sub-pill" role="presentation"><a href="#">Groups</a></li>
-                <li class="sub-pill" role="presentation"><a href="#">Organizations</a></li>
-                <li class="sub-pill" role="presentation"><a href="#">Locations</a></li>
-                <li class="sub-pill" role="presentation"><a href="#">Devices</a></li>
+                <li class="sub-pill" role="presentation"><a href="{{ route('individuals') }}">Individuals</a></li>
+                <li class="sub-pill" role="presentation"><a href="{{ route('groups') }}">Groups</a></li>
+                <li class="sub-pill" role="presentation"><a href="{{ route('organizations') }}">Organizations</a></li>
+                <li class="sub-pill" role="presentation"><a href="{{ route('locations') }}">Locations</a></li>
+                <li class="sub-pill" role="presentation"><a href="{{ route('devices') }}">Devices</a></li>
             </ul>
         </li>
 

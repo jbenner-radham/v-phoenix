@@ -24,6 +24,37 @@ class EntityController extends Controller {
 		return view('entities.index', compact('entities'));
 	}
 
+	public function individualsIndex()
+	{
+		$entities = Entity::whereKindId(1)->orderBy('family_name', 'asc')->paginate(20);
+
+		return view('entities.individuals', compact('entities'));
+	}
+	public function groupsIndex()
+	{
+		$entities = Entity::whereKindId(2)->orderBy('family_name', 'asc')->paginate(20);
+
+		return view('entities.groups', compact('entities'));
+	}
+	public function organizationsIndex()
+	{
+		$entities = Entity::whereKindId(3)->orderBy('family_name', 'asc')->paginate(20);
+
+		return view('entities.organizations', compact('entities'));
+	}
+	public function locationsIndex()
+	{
+		$entities = Entity::whereKindId(4)->orderBy('family_name', 'asc')->paginate(20);
+
+		return view('entities.locations', compact('entities'));
+	}
+	public function devicesIndex()
+	{
+		$entities = Entity::whereKindId(5)->orderBy('family_name', 'asc')->paginate(20);
+
+		return view('entities.devices', compact('entities'));
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *

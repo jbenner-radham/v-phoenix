@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Individuals</h1>
+    <h1>Organizations</h1>
 
     @include('_includes.entities.list-table')
 
