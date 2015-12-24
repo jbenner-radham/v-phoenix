@@ -2,6 +2,7 @@
   "private": true,
   "devDependencies": {
     "bootstrap": "^3.3.6",
+    "colors.css": "^2.3.0",
     "gulp": "^3.8.8",
     "less": "^2.5.3"
   },
