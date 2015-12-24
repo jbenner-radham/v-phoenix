@@ -21,6 +21,7 @@ Route::get('entities/groups', ['as' => 'groups', 'uses' => 'EntityController@gro
 Route::get('entities/locations', ['as' => 'locations', 'uses' => 'EntityController@locationsIndex']);
 Route::get('entities/organizations', ['as' => 'organizations', 'uses' => 'EntityController@organizationsIndex']);
 Route::get('entities/devices', ['as' => 'devices', 'uses' => 'EntityController@devicesIndex']);
+Route::get('entities/applications', ['as' => 'applications', 'uses' => 'EntityController@applicationsIndex']);
 
 
 Route::resource('calendars', 'CalendarController');

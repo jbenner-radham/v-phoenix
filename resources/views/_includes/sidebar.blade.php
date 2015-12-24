@@ -14,6 +14,7 @@
                 <li class="sub-pill" role="presentation"><a href="{{ route('organizations') }}">Organizations</a></li>
                 <li class="sub-pill" role="presentation"><a href="{{ route('locations') }}">Locations</a></li>
                 <li class="sub-pill" role="presentation"><a href="{{ route('devices') }}">Devices</a></li>
+                <li class="sub-pill" role="presentation"><a href="{{ route('applications') }}">Applications</a></li>
             </ul>
         </li>
 

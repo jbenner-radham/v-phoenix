@@ -14,7 +14,7 @@ $factory->define(App\Entity::class, function (Generator $faker) {
         'street_address'    => $faker->streetAddress,
         'locality'          => $faker->locale,
         'tel'               => $faker->phoneNumber,
-        'kind_id'           => $faker->numberBetween(1,5)
+        'kind_id'           => $faker->numberBetween(1,6)
     ];
 });
 

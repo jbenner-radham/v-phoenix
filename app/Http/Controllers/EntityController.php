@@ -85,6 +85,18 @@ class EntityController extends Controller {
 	}
 
 	/**
+	 * Display entities of kind 'application'
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
+	public function applicationsIndex()
+	{
+		$entities = Entity::whereKindId(5)->orderBy('family_name', 'asc')->paginate(20);
+
+		return view('entities.applications', compact('entities'));
+	}
+
+	/**
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response
