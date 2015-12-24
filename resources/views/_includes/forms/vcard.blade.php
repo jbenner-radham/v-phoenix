@@ -3,24 +3,27 @@
          <legend>Name</legend>
          <div class="col-xs-12">
              {{-- [Email] --}}
-             <div class="form-group">
-                 <label for="email" class="col-sm-3 control-label vcard-label">Email</label>
+             <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                 <label for="email" class="col-sm-3 control-label vcard-label">Email *</label>
                  <div class="col-sm-9">
                      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                     {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                  </div>
              </div>
              {{-- [Family Name] --}}
-             <div class="form-group">
-                 <label for="familyName" class="col-sm-3 control-label vcard-label">Family Name</label>
+             <div class="form-group {{ $errors->has('family_name') ? 'has-error' : '' }}">
+                 <label for="familyName" class="col-sm-3 control-label vcard-label">Family Name *</label>
                  <div class="col-sm-9">
                      <input type="text" class="form-control" id="familyName" name="family_name" placeholder="Family Name">
+                     {!! $errors->first('family_name', '<span class="help-block">:message</span>') !!}
                  </div>
              </div>
              {{-- [Given Name] --}}
-             <div class="form-group">
-                 <label for="givenName" class="col-sm-3 control-label vcard-label">Given Name</label>
+             <div class="form-group {{ $errors->has('given_name') ? 'has-error' : '' }}">
+                 <label for="givenName" class="col-sm-3 control-label vcard-label">Given Name *</label>
                  <div class="col-sm-9">
-                     <input type="text" class="form-control" id="givenName" name="given_name" "Given Name">
+                     <input type="text" class="form-control" id="givenName" name="given_name" placeholder="Given Name">
+                     {!! $errors->first('given_name', '<span class="help-block">:message</span>') !!}
                  </div>
              </div>
              {{-- [Title] --}}
@@ -82,15 +85,16 @@
      <fieldset>
          <legend>Kind</legend>
          {{-- [Entity Kind] --}}
-         <div class="form-group">
-             <label for="entity-kind" class="col-sm-3 control-label vcard-label">Entity Kind</label>
+         <div class="form-group {{ $errors->has('kind_id') ? 'has-error' : '' }}">
+             <label for="entity-kind" class="col-sm-3 control-label vcard-label">Entity Kind *</label>
              <div class="col-sm-9">
                  <select class="form-control" id="entity-kind" name="kind_id">
-                     <option selected disabled>Choose ...</option>
+                     <option value="" selected disabled>Choose ...</option>
                      @foreach ($kinds as $kind)
                          <option value="{{ $kind->id }}">@titleize($kind->name)</option>
                      @endforeach
                  </select>
+                 {!! $errors->first('kind_id', '<span class="help-block">:message</span>') !!}
              </div>
          </div>
      </fieldset>

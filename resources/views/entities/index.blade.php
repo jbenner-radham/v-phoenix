@@ -26,6 +26,17 @@
                 <td>{{ $entity->kind->name }}</td>
                 <td>
                     <a class="btn btn-default" href="{{ route('entities.show', $entity->id) }}">View Details</a>
+                    <form action="{{ route('delete-entity', $entity->id) }}" method="post" style="display:inline">
+                        {{ csrf_field() }}
+                        <button class="btn btn-danger"
+                                type="button"
+                                data-toggle="modal"
+                                data-target="#confirm-delete"
+                                data-title="Delete Entity"
+                                data-message="Are you sure you want to delete this entity?">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </form>
                 </td>
             </tr>
         @endforeach
@@ -36,5 +47,10 @@
         {!! $entities->render() !!}
     </div>
 
-
+@include('_partials.delete-confirmation')
 @endsection
+
+@section('bottom_scripts')
+    <script src="{{ asset('js/delete-confirm-modal.js') }}"></script>
+@endsection
+

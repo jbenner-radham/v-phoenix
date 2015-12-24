@@ -5763,6 +5763,9 @@ h1.index-title {
 a.index-title {
   margin-bottom: 40px; }
 
+span.help-block {
+  font-size: small; }
+
 /* Calendar
 ---------------------------------- */
 table.calendar {

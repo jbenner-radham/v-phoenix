@@ -5,6 +5,7 @@ use App\Entity;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreNewEntityRequest;
 
 class EntityController extends Controller {
 
@@ -111,10 +112,10 @@ class EntityController extends Controller {
 	/**
 	 * Store a newly created resource in storage.
 	 *
-	 * @param Request $request
+	 * @param StoreNewEntityRequest|Request $request
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(StoreNewEntityRequest $request)
 	{
 		$entity = new Entity;
         $entity->email            = $request->email;
