@@ -11,4 +11,8 @@
         @endforeach
     </ol>
 
+    <script id="json-calendar" type="application/json">
+        {!! json_encode($days, JSON_PRETTY_PRINT)  !!}
+    </script>
+
 @endsection

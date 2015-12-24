@@ -2,7 +2,7 @@
     @link http://www.w3.org/TR/html5/tabular-data.html
     @link http://accessibility.psu.edu/tableshtml/
 --}}
-<table aria-describedby="week" role="presentation">
+<table aria-describedby="Calendar week" role="presentation">
     <thead>
         <th scope="col" id="sunday">    Sunday
         <th scope="col" id="monday">    Monday

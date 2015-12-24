@@ -23,6 +23,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Lead whereLeadStatusesId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Lead whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Lead whereUpdatedAt($value)
+ * @property integer $entity_id
+ * @property-read \App\Entity $entity
+ * @property-read \App\LeadSource $source
+ * @property-read \App\LeadStatus $status
  */
 class Lead extends Model
 {

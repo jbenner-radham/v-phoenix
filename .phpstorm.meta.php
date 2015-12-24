@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2015-12-19.
+    * Generated on 2015-12-24.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -91,7 +91,6 @@ namespace PHPSTORM_META {
             'command.migrate.status' instanceof \Illuminate\Database\Console\Migrations\StatusCommand,
             'command.seed' instanceof \Illuminate\Database\Console\Seeds\SeedCommand,
             'command.seeder.make' instanceof \Illuminate\Database\Console\Seeds\SeederMakeCommand,
-            'seeder' instanceof \Illuminate\Database\Seeder,
             'composer' instanceof \Illuminate\Foundation\Composer,
             'command.queue.table' instanceof \Illuminate\Queue\Console\TableCommand,
             'command.queue.failed' instanceof \Illuminate\Queue\Console\ListFailedCommand,
@@ -205,7 +204,6 @@ namespace PHPSTORM_META {
             'command.migrate.status' instanceof \Illuminate\Database\Console\Migrations\StatusCommand,
             'command.seed' instanceof \Illuminate\Database\Console\Seeds\SeedCommand,
             'command.seeder.make' instanceof \Illuminate\Database\Console\Seeds\SeederMakeCommand,
-            'seeder' instanceof \Illuminate\Database\Seeder,
             'composer' instanceof \Illuminate\Foundation\Composer,
             'command.queue.table' instanceof \Illuminate\Queue\Console\TableCommand,
             'command.queue.failed' instanceof \Illuminate\Queue\Console\ListFailedCommand,
@@ -319,7 +317,6 @@ namespace PHPSTORM_META {
             'command.migrate.status' instanceof \Illuminate\Database\Console\Migrations\StatusCommand,
             'command.seed' instanceof \Illuminate\Database\Console\Seeds\SeedCommand,
             'command.seeder.make' instanceof \Illuminate\Database\Console\Seeds\SeederMakeCommand,
-            'seeder' instanceof \Illuminate\Database\Seeder,
             'composer' instanceof \Illuminate\Foundation\Composer,
             'command.queue.table' instanceof \Illuminate\Queue\Console\TableCommand,
             'command.queue.failed' instanceof \Illuminate\Queue\Console\ListFailedCommand,
@@ -433,7 +430,6 @@ namespace PHPSTORM_META {
             'command.migrate.status' instanceof \Illuminate\Database\Console\Migrations\StatusCommand,
             'command.seed' instanceof \Illuminate\Database\Console\Seeds\SeedCommand,
             'command.seeder.make' instanceof \Illuminate\Database\Console\Seeds\SeederMakeCommand,
-            'seeder' instanceof \Illuminate\Database\Seeder,
             'composer' instanceof \Illuminate\Foundation\Composer,
             'command.queue.table' instanceof \Illuminate\Queue\Console\TableCommand,
             'command.queue.failed' instanceof \Illuminate\Queue\Console\ListFailedCommand,
