@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Locations</h1>
+    <h1 class="index-title">Locations</h1>
 
     @include('_includes.entities.list-table')
 

@@ -2,7 +2,8 @@
 
 @section('content')
 
-    <h1>All Entities</h1>
+    <h1 class="index-title">All Entities</h1>
+    <a class="btn btn-default pull-right index-title" href="{{ route('entities.create') }}">Create Entity</a>
 
     <table class="table">
         <thead>
@@ -10,6 +11,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Type</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -22,6 +24,9 @@
                 </td>
                 <td>{!! $entity->email !!}</td>
                 <td>{{ $entity->kind->name }}</td>
+                <td>
+                    <a class="btn btn-default" href="{{ route('entities.show', $entity->id) }}">View Details</a>
+                </td>
             </tr>
         @endforeach
         </tbody>

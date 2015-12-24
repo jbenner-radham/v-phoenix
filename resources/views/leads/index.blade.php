@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <h1>Leads Index Yoz!</h1>
+    <h1 class="index-title">Leads Index Yoz!</h1>
 
-    <a class="btn btn-default" href="{{ route('leads.create') }}">Create a Lead</a>
+    <a class="btn btn-default pull-right index-title" href="{{ route('leads.create') }}">Create a Lead</a>
 
     <table class="table">
         <thead>

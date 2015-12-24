@@ -5755,6 +5755,14 @@ button.close {
 .lead select[name="business-line"] {
   text-transform: capitalize; }
 
+/* Styling for the various index views
+-----------------------------------*/
+h1.index-title {
+  display: inline; }
+
+a.index-title {
+  margin-bottom: 40px; }
+
 /* Calendar
 ---------------------------------- */
 table.calendar {
