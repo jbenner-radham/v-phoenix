@@ -5,6 +5,8 @@
     <h1>Calendar Index Yoz!</h1>
     <p>So timely. Much days.</p>
 
+    @include('_includes.calendars.week')
+
     <ol>
         @foreach($days as $day)
             <li>{!! dump($day) !!}{{--{{ $day }} - {{ $dt->dayOfWeek }}--}}</li>
