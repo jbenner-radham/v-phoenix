@@ -7,13 +7,11 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "barryvdh/laravel-ide-helper": "^2.1",
         "doctrine/dbal": "~2.3",
         "laravel/installer": "@stable",
         "mcrumm/pecan": "@stable",
         "laravel/envoy": "@stable",
         "sebastian/phpdcd": "@stable",
-        "codeception/codeception": "@stable",
         "vinkla/climb": "@stable",
         "squizlabs/php_codesniffer": "@stable",
         "phploc/phploc": "@stable",
@@ -21,18 +19,18 @@
         "nesbot/carbon": "^1.21",
         "illuminate/html": "^5.0",
         "radioactivehamster/temporal": "^0.1.0",
-        "barryvdh/laravel-debugbar": "^2.0",
-        "reactjs/react-php-v8js": "dev-master",
-        "talyssonoc/react-laravel": "^0.10.2"
+        "barryvdh/laravel-debugbar": "^2.0"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.1",
+        "codeception/codeception": "@stable",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
         "phpspec/phpspec": "~2.1",
         "laralib/l5scaffold": "^1.0",
         "symfony/var-dumper": "^2.7",
-        "laravel/homestead": "^2.1"
+        "laravel/homestead": "^3.0"
     },
     "autoload": {
         "classmap": [

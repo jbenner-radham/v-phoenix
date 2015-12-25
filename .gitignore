@@ -1,9 +1,10 @@
-/vendor
+/.bundle
+/.idea
 /node_modules
-Homestead.yaml
-Homestead.json
-.env
-.vagrant
+/vendor
 *.bak
 .DS_Store
-.idea/
+.env
+.vagrant
+Homestead.yaml
+Homestead.json
