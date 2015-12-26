@@ -7,7 +7,7 @@
         {!! csrf_field() !!}
 
         {{-- [vCard] --}}
-        @include('_includes.forms.vcard')
+        @include('_partials.forms.vcard')
 
         <fieldset>
             <legend>Lead Details</legend>

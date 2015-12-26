@@ -64,7 +64,32 @@ table.calendar {
   float: right;
 }
 
+/* vCards
+---------------------------------- */
+
 .vcard-label {
   font-weight: inherit;
   font-size: 16px;
+}
+
+%vcard-label-for {
+  @extend .col-sm-3;
+  @extend .control-label;
+  @extend .vcard-label;
+}
+
+.vcard {
+  & label[for="email"],
+  & label[for="familyName"],
+  & label[for="givenName"],
+  & label[for="title"],
+  & label[for="streetAddress"],
+  & label[for="extendedAddress"],
+  & label[for="region"],
+  & label[for="postalCode"],
+  & label[for="countryName"],
+  & label[for="locality"],
+  & label[for="entity-kind"] {
+    @extend %vcard-label-for;
+  }
 }
