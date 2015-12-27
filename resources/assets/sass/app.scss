@@ -79,6 +79,10 @@ table.calendar {
 }
 
 .vcard {
+  & fieldset > div {
+    @extend .col-xs-12;
+  }
+
   & label[for="email"],
   & label[for="familyName"],
   & label[for="givenName"],

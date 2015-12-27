@@ -1,7 +1,7 @@
  <div class="vcard">
      <fieldset>
          <legend>Name</legend>
-         <div class="col-xs-12">
+         <div>
              {{-- [Email] --}}
              <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                  <label for="email">Email *</label>
@@ -37,7 +37,7 @@
      </fieldset>
      <fieldset>
          <legend>Address</legend>
-         <div class="col-xs-12">
+         <div>
              {{-- [Street Address] --}}
              <div class="form-group">
                  <label for="streetAddress">Street Address</label>
