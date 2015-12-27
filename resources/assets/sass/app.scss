@@ -1,27 +1,33 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+button {
+    &[type="submit"] {
+        @extend .btn, .btn-default;
+    }
+}
+
 #content {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 .lead {
-  select[name="business-line"] {
-    text-transform: capitalize;
-  }
+    select[name="business-line"] {
+        text-transform: capitalize;
+    }
 }
 
 /* Styling for the various index views
 -----------------------------------*/
 h1.index-title {
-  display: inline;
+    display: inline;
 }
 
 a.index-title {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 span.help-block {
-  font-size: small;
+    font-size: small;
 }
 
 
@@ -29,8 +35,8 @@ span.help-block {
 ---------------------------------- */
 
 table.calendar {
-  border: 0.1rem solid #3c3c3c;
-  margin: 2rem;
+    border: 0.1rem solid #3c3c3c;
+    margin: 2rem;
 }
 
 /* Sidebar Nav Pills
@@ -39,61 +45,72 @@ table.calendar {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus,
 .nav-pills > li > a:hover {
-  background-color: #55acee;
+    background-color: #55acee;
 }
 
 .nav-pills > li > a {
-  border-radius: 0;
-  padding: 8px 20px;
-  border: 1px solid #cacaca;
-  color: #666666;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 300;
+    border-radius: 0;
+    padding: 8px 20px;
+    border: 1px solid #cacaca;
+    color: #666666;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 .sub-pill {
-  width: 80%;
+    width: 80%;
 }
 
 .collapse-parent > li:first-child {
-  margin-top: 2px;
+    margin-top: 2px;
 }
 
 .caret-container {
-  float: right;
+    float: right;
 }
 
 /* vCards
 ---------------------------------- */
 
 .vcard-label {
-  font-weight: inherit;
-  font-size: 16px;
+    font-weight: inherit;
+    font-size: 16px;
 }
 
 %vcard-label-for {
-  @extend .col-sm-3;
-  @extend .control-label;
-  @extend .vcard-label;
+    @extend .col-sm-3;
+    @extend .control-label;
+    @extend .vcard-label;
 }
 
 .vcard {
-  & fieldset > div {
-    @extend .col-xs-12;
-  }
+    & fieldset {
+        & > div {
+            @extend .col-xs-12;
+        }
 
-  & label[for="email"],
-  & label[for="familyName"],
-  & label[for="givenName"],
-  & label[for="title"],
-  & label[for="streetAddress"],
-  & label[for="extendedAddress"],
-  & label[for="region"],
-  & label[for="postalCode"],
-  & label[for="countryName"],
-  & label[for="locality"],
-  & label[for="entity-kind"] {
-    @extend %vcard-label-for;
-  }
+        & label + div {
+            @extend .col-sm-9;
+
+            & > input,
+            & > select {
+                @extend .form-control;
+            }
+        }
+    }
+
+    & label[for="email"],
+    & label[for="familyName"],
+    & label[for="givenName"],
+    & label[for="title"],
+    & label[for="streetAddress"],
+    & label[for="extendedAddress"],
+    & label[for="region"],
+    & label[for="postalCode"],
+    & label[for="countryName"],
+    & label[for="locality"],
+    & label[for="entity-kind"] {
+        @extend %vcard-label-for;
+    }
 }
