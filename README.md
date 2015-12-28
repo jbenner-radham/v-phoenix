@@ -1,7 +1,17 @@
-# vPhoenix
+vPhoenix
+========
 > Rise From Your Gwave... and burn down vTiger!!!
 
-## Normative References
+Why This Is Awesome for the Business Bullet Points
+--------------------------------------------------
+
+- Built upon the latest [Laravel](https://laravel.com/) framework LTS (Long Term Support) release, providing 5 years of 
+  support.
+- All vendor code is [MIT](http://opensource.org/licenses/MIT) licensed, meaning it's among the most 
+  permissive and business friendly of all the open source licenses.
+
+Normative References
+--------------------
 
 - __[RFC6350]__
   - Perreault, S., "vCard Format Specification", RFC 6350, DOI 10.17487/RFC6350, August 2011, 
@@ -10,7 +20,8 @@
   - Desruisseaux, B., Ed., "Internet Calendaring and Scheduling Core Object Specification (iCalendar)", RFC 5545, 
   DOI 10.17487/RFC5545, September 2009, <<http://www.rfc-editor.org/info/rfc5545>>.
 
-## Informative References
+Informative References
+----------------------
 
 - __[RFC6473]__
   - Saint-Andre, P., "vCard KIND:application", RFC 6473, DOI 10.17487/RFC6473, December 2011, 

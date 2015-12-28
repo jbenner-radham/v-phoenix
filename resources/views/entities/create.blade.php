@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="panel-body lead" vocab="http://microformats.org/profile/hcard">
+<div class="panel-body entity" vocab="http://microformats.org/profile/hcard">
     <form action="{{ route('entities.store') }}" method="POST" class="form-horizontal">
         {!! csrf_field() !!}
 
