@@ -18,7 +18,7 @@
         "semantic/ui": "^2.1",
         "nesbot/carbon": "^1.21",
         "illuminate/html": "^5.0",
-        "radioactivehamster/temporal": "^0.1.0",
+        "radioactivehamster/temporal": "~0.2.0",
         "barryvdh/laravel-debugbar": "^2.0"
     },
     "require-dev": {

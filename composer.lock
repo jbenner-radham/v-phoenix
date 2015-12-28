@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "235f2df40de26ed590e112306501eee1",
-    "content-hash": "cda7d7c5eca5d384c11d0a1905656749",
+    "hash": "a531618fae306c705f2aabf884e41378",
+    "content-hash": "3b6bc6a323bc40aede4da291c691bd07",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -2371,16 +2371,16 @@
         },
         {
             "name": "radioactivehamster/temporal",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/radioactivehamster/temporal.git",
-                "reference": "fc0d39273c5b6926a82cdf841c7407d21e9758f5"
+                "reference": "07ccae3d4447dcfb79c012ac8d27db9a7d8ce3ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/radioactivehamster/temporal/zipball/fc0d39273c5b6926a82cdf841c7407d21e9758f5",
-                "reference": "fc0d39273c5b6926a82cdf841c7407d21e9758f5",
+                "url": "https://api.github.com/repos/radioactivehamster/temporal/zipball/07ccae3d4447dcfb79c012ac8d27db9a7d8ce3ec",
+                "reference": "07ccae3d4447dcfb79c012ac8d27db9a7d8ce3ec",
                 "shasum": ""
             },
             "require": {
@@ -2407,7 +2407,7 @@
                 }
             ],
             "description": "A date & time utility library for PHP.",
-            "time": "2015-12-14 03:58:27"
+            "time": "2015-12-27 21:33:14"
         },
         {
             "name": "react/cache",
