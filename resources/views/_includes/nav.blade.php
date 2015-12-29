@@ -12,6 +12,7 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="{{ route('entities.index') }}">Entities</a>
+                <li><a href="{{ route('contacts.index') }}">Contacts</a>
                 <li><a href="{{ route('events.index') }}">Events</a>
                 <li><a href="{{ route('calendars.index') }}">Calendar</a>
                 <li><a href="{{ route('leads.index') }}">Leads</a>
