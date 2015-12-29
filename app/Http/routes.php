@@ -14,7 +14,7 @@ Route::get('entities/applications',         ['as' => 'applications',    'uses' =
 
 Route::post('entities/delete/{id}',         ['as' => 'delete-entity',   'uses' => 'EntityController@destroy']);
 
-
+Route::resource('contacts', 'ContactController');
 Route::resource('calendars', 'CalendarController');
 Route::resource('events', 'EventController');
 Route::resource('leads', 'LeadController');
