@@ -157,8 +157,9 @@ class EntityController extends Controller {
 	public function edit($id)
 	{
 		$entity = Entity::findOrFail($id);
+		$kinds = Kind::all();
 
-		return view('entities.edit', compact('entity'));
+		return view('entities.edit', compact('entity', 'kinds'));
 	}
 
 	/**
@@ -171,7 +172,6 @@ class EntityController extends Controller {
 	public function update(Request $request, $id)
 	{
 		$entity = Entity::findOrFail($id);
-
 		$entity->save();
 
 		return redirect()->route('entities.index')->with('message', 'Item updated successfully.');

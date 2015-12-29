@@ -23,9 +23,14 @@
                     </a>
                 </td>
                 <td>{!! $entity->email !!}</td>
-                <td>{{ $entity->kind->name }}</td>
+                <td>@titleize($entity->kind->name)</td>
                 <td>
-                    <a class="btn btn-default" href="{{ route('entities.show', $entity->id) }}">View Details</a>
+                    <a class="btn btn-success" href="{{ route('entities.show', $entity->id) }}">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a class="btn btn-warning" href="{{ route('entities.edit', $entity->id) }}">
+                        <i class="fa fa-pencil"></i>
+                    </a>
                     <form action="{{ route('delete-entity', $entity->id) }}" method="post" style="display:inline">
                         {{ csrf_field() }}
                         <button class="btn btn-danger"

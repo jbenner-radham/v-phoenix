@@ -6,7 +6,8 @@
              <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                  <label for="email">Email *</label>
                  <div>
-                     <input type="email" id="email" name="email" placeholder="Email">
+                     <input type="email" id="email" name="email" placeholder="Email"
+                            value="{{ ($entity->email) ?: (old('email')) ?: '' }}">
                      {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                  </div>
              </div>
@@ -14,7 +15,8 @@
              <div class="form-group {{ $errors->has('family_name') ? 'has-error' : '' }}">
                  <label for="familyName">Family Name *</label>
                  <div>
-                     <input type="text" id="familyName" name="family_name" placeholder="Family Name">
+                     <input type="text" id="familyName" name="family_name" placeholder="Family Name"
+                            value="{{ ($entity->family_name) ?: (old('family_name')) ?: '' }}">
                      {!! $errors->first('family_name', '<span class="help-block">:message</span>') !!}
                  </div>
              </div>
@@ -22,7 +24,8 @@
              <div class="form-group {{ $errors->has('given_name') ? 'has-error' : '' }}">
                  <label for="givenName">Given Name *</label>
                  <div>
-                     <input type="text" id="givenName" name="given_name" placeholder="Given Name">
+                     <input type="text" id="givenName" name="given_name" placeholder="Given Name"
+                            value="{{ ($entity->given_name) ?: (old('given_name')) ?: '' }}">
                      {!! $errors->first('given_name', '<span class="help-block">:message</span>') !!}
                  </div>
              </div>
@@ -30,7 +33,8 @@
              <div class="form-group">
                  <label for="title">Title</label>
                  <div>
-                     <input type="text" id="title" name="title" placeholder="Title">
+                     <input type="text" id="title" name="title" placeholder="Title"
+                            value="{{ ($entity->title) ?: (old('title')) ?: '' }}">
                  </div>
              </div>
          </div>
@@ -42,42 +46,48 @@
              <div class="form-group">
                  <label for="streetAddress">Street Address</label>
                  <div>
-                     <input type="text" id="streetAddress" name="street_address" placeholder="Street Address">
+                     <input type="text" id="streetAddress" name="street_address" placeholder="Street Address"
+                            value="{{ ($entity->street_address) ?: (old('street_address')) ?: '' }}">
                  </div>
              </div>
              {{-- [Extended Address] --}}
              <div class="form-group">
                  <label for="extendedAddress">Extended Address</label>
                  <div>
-                     <input type="text" id="extendedAddress" name="extended_address" placeholder="Extended Address">
+                     <input type="text" id="extendedAddress" name="extended_address" placeholder="Extended Address"
+                            value="{{ ($entity->extended_address) ?: (old('extended_address')) ?: '' }}">
                  </div>
              </div>
              {{-- [Region] --}}
              <div class="form-group">
                  <label for="region">Region</label>
                  <div>
-                     <input type="text" id="region" name="region" placeholder="Region">
+                     <input type="text" id="region" name="region" placeholder="Region"
+                            value="{{ ($entity->region) ?: (old('region')) ?: '' }}">
                  </div>
              </div>
              {{-- [Postal Code] --}}
              <div class="form-group">
                  <label for="postalCode">Postal Code</label>
                  <div>
-                     <input type="text" id="postalCode" name="postal_code" placeholder="Postal Code">
+                     <input type="text" id="postalCode" name="postal_code" placeholder="Postal Code"
+                            value="{{ ($entity->postal_code) ?: (old('postal_code')) ?: '' }}">
                  </div>
              </div>
              {{-- [Country Name] --}}
              <div class="form-group">
                  <label for="countryName">Country Name</label>
                  <div>
-                     <input type="text" id="countryName" name="country_name" placeholder="Country Name">
+                     <input type="text" id="countryName" name="country_name" placeholder="Country Name"
+                            value="{{ ($entity->country_name) ?: (old('country_name')) ?: '' }}">
                  </div>
              </div>
              {{-- [Locality] --}}
              <div class="form-group">
                  <label for="locality">Locality</label>
                  <div>
-                     <input type="text" id="locality" name="locality" placeholder="Locality">
+                     <input type="text" id="locality" name="locality" placeholder="Locality"
+                            value="{{ ($entity->locality) ?: (old('locality')) ?: '' }}">
                  </div>
              </div>
          </div>
@@ -89,9 +99,12 @@
              <label for="entity-kind">Entity Kind *</label>
              <div>
                  <select id="entity-kind" name="kind_id">
-                     <option value="" selected disabled>Choose ...</option>
+                     <option value="" {{ (!$entity->kind ? 'selected' : '') }} disabled>Choose ...</option>
                      @foreach ($kinds as $kind)
-                         <option value="{{ $kind->id }}">@titleize($kind->name)</option>
+                         <option value="{{ $kind->id }}"
+                                 {{ ($entity->kind_id == $kind->id ? 'selected' : '') }}>
+                             @titleize($kind->name)
+                         </option>
                      @endforeach
                  </select>
                  {!! $errors->first('kind_id', '<span class="help-block">:message</span>') !!}
