@@ -105,8 +105,9 @@ class EntityController extends Controller {
 	public function create()
 	{
         $kinds = Kind::all();
+		$entity = (object) NULL;
 
-		return view('entities.create', compact('kinds'));
+		return view('entities.create', compact('kinds', 'entity'));
 	}
 
 	/**
@@ -117,21 +118,10 @@ class EntityController extends Controller {
 	 */
 	public function store(StoreNewEntityRequest $request)
 	{
-		$entity = new Entity;
-        $entity->email            = $request->email;
-        $entity->family_name      = $request->family_name;
-        $entity->given_name       = $request->given_name;
-        $entity->title            = $request->title;
-        $entity->street_address   = $request->street_address;
-        $entity->extended_address = $request->extended_address;
-        $entity->region           = $request->region;
-        $entity->postal_code      = $request->postal_code;
-        $entity->country_name     = $request->country_name;
-        $entity->locality         = $request->locality;
-        $entity->kind_id          = $request->kind_id;
-        $entity->save();
+		unset($request['_token']);
+        $entity = Entity::create($request->all());
 
-        return redirect()->route('entities.index')
+        return redirect()->route('entities.show', $entity->id)
                          ->with('message', 'Item created successfully.');
 	}
 
@@ -172,9 +162,10 @@ class EntityController extends Controller {
 	public function update(Request $request, $id)
 	{
 		$entity = Entity::findOrFail($id);
+		$entity->fill($request->all());
 		$entity->save();
 
-		return redirect()->route('entities.index')->with('message', 'Item updated successfully.');
+		return redirect()->route('entities.show', $id)->with('message', 'Item updated successfully.');
 	}
 
 	/**

@@ -5,6 +5,7 @@
     <div class="panel-body entity" vocab="http://microformats.org/profile/hcard">
         <form action="{{ route('entities.update', $entity->id) }}" method="POST" class="form-horizontal">
             {!! csrf_field() !!}
+            {!! method_field('PUT') !!}
 
             {{-- [vCard] --}}
             @include('_partials.forms.vcard')

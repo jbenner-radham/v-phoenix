@@ -51,6 +51,25 @@ class Entity extends Model
     protected $table = 'entities';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'email',
+        'family_name',
+        'given_name',
+        'title',
+        'street_address',
+        'extended_address',
+        'region',
+        'postal_code',
+        'country_name',
+        'locality',
+        'kind_id'
+    ];
+
+    /**
      * An Entity can have a kind
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
