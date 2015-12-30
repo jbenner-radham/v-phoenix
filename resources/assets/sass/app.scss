@@ -10,6 +10,14 @@ button {
     padding: 2rem;
 }
 
+#navbar {
+    @extend .collapse, .navbar-collapse;
+
+    & > ul {
+        @extend .nav, .navbar-nav;
+    }
+}
+
 .lead {
     select[name="business-line"] {
         text-transform: capitalize;

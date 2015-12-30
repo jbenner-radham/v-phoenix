@@ -9,8 +9,8 @@
             </button>
             <a class="navbar-brand" href="/">vPhoenix</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+        <div id="navbar">
+            <ul>
                 <li><a href="{{ route('entities.index') }}">Entities</a>
                 <li><a href="{{ route('contacts.index') }}">Contacts</a>
                 <li><a href="{{ route('events.index') }}">Events</a>
