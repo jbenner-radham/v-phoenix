@@ -11,4 +11,9 @@
     </div>
 
 
+    @include('_partials.delete-confirmation')
+@endsection
+
+@section('bottom_scripts')
+    <script src="{{ asset('js/delete-confirm-modal.js') }}"></script>
 @endsection
