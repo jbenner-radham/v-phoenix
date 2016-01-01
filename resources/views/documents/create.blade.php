@@ -16,7 +16,7 @@
                         <div class="form-group {{ $errors->has('document') ? 'has-error' : '' }}">
                             <label for="document">Document</label>
                             <div>
-                                <input id="document" type="file">
+                                <input name="document" id="document" type="file">
                             </div>
                         </div>
                     </div>

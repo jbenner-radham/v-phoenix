@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Document;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -37,7 +38,18 @@ class DocumentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (!$request->hasFile('document')) {
+            /** @todo Error handling */
+            throw new \RuntimeException('No document :(');
+        }
+
+        $file = $request->file('document');
+
+        $document = new Document;
+        $document->data = base64_encode($file->openFile()->fread($file->getSize()));
+        $document->mime_type = $file->getMimeType();
+        $document->title = $request->input('title');
+        $document->save();
     }
 
     /**
