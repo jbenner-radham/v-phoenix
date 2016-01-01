@@ -2,21 +2,20 @@
 
 @section('content')
 
-    <h1>Calendar Index Yoz!</h1>
-    <p>So timely. Much days.</p>
+    <h1>Calendar</h1>
+    <blockquote>So timely. Much days.</blockquote>
 
-    <h2>{{ current($days)->month }}</h2>
+    <section id="calendar"></section>
 
-    @include('_includes.calendars.week')
-
-    <ol>
-        @foreach($days as $day)
-            <li>[[ {{ strtolower($day->month) }}-{{ sprintf('%02u', $day->ofMonth) }} ]] {!! dump($day) !!}{{--{{ $day }} - {{ $dt->dayOfWeek }}--}}</li>
-        @endforeach
-    </ol>
-
-    <script id="json-calendar" type="application/json">
-        {!! json_encode($days, JSON_PRETTY_PRINT)  !!}
+    <script>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({});
+        });
     </script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.5.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.5.0/fullcalendar.print.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.5.0/fullcalendar.min.js"></script>
 
 @endsection
