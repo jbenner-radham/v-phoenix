@@ -49,7 +49,7 @@ class DocumentController extends Controller
         $document = new Document;
         $document->data = base64_encode($data);
         $document->mime_type = $file->getMimeType();
-        $document->title = $request->input('title', '');
+        $document->title = $request->input('title', $file->getClientOriginalName());
         $document->save();
     }
 
