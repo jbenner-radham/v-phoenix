@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Document;
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use RuntimeException;
 
 class DocumentController extends Controller
 {
@@ -40,15 +40,16 @@ class DocumentController extends Controller
     {
         if (!$request->hasFile('document')) {
             /** @todo Error handling */
-            throw new \RuntimeException('No document :(');
+            throw new RuntimeException('No document :(');
         }
 
         $file = $request->file('document');
+        $data = $file->openFile()->fread($file->getSize());
 
         $document = new Document;
-        $document->data = base64_encode($file->openFile()->fread($file->getSize()));
+        $document->data = base64_encode($data);
         $document->mime_type = $file->getMimeType();
-        $document->title = $request->input('title');
+        $document->title = $request->input('title', '');
         $document->save();
     }
 

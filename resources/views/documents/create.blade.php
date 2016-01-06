@@ -6,7 +6,8 @@
     {{ dd(Request::path()) }}
     --}}
     <div class="panel-body contact">
-        <form action="{{ route('documents.store') }}" method="POST" class="form-horizontal">
+        {{-- <https://html.spec.whatwg.org/multipage/forms.html#file-upload-state-(type=file)> --}}
+        <form action="{{ route('documents.store') }}" enctype="multipart/form-data" method="POST" class="form-horizontal">
             {!! csrf_field() !!}
             <div class="form-group">
                 <fieldset>
@@ -16,7 +17,7 @@
                         <div class="form-group {{ $errors->has('document') ? 'has-error' : '' }}">
                             <label for="document">Document</label>
                             <div>
-                                <input name="document" id="document" type="file">
+                                <input type="file" formenctype="multipart/form-data" name="document" id="document">
                             </div>
                         </div>
                     </div>
