@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6511f4b323e43cc0edd377f3ac1da932",
-    "content-hash": "251982ded907519790e8b110308804af",
+    "hash": "0532322a26cc188ec9f4d132a82b3f1a",
+    "content-hash": "af33fce54c21eb2f8f570d15e9287166",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -3187,6 +3187,56 @@
                 "ui"
             ],
             "time": "2015-12-19 20:58:58"
+        },
+        {
+            "name": "spatie/laravel-robots-middleware",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-robots-middleware.git",
+                "reference": "e3de2a739ef0508837299eb2f0c7cb7335d8c7ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-robots-middleware/zipball/e3de2a739ef0508837299eb2f0c7cb7335d8c7ce",
+                "reference": "e3de2a739ef0508837299eb2f0c7cb7335d8c7ce",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^5.1",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.2",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\RobotsMiddleware\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add an `all` or `none` robots header to your requests via a middleware in Laravel",
+            "homepage": "https://github.com/spatie/laravel-robots-middleware",
+            "keywords": [
+                "index",
+                "robots",
+                "seo",
+                "spatie"
+            ],
+            "time": "2016-01-05 15:52:27"
         },
         {
             "name": "squizlabs/php_codesniffer",

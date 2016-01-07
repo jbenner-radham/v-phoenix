@@ -19,7 +19,8 @@
         "radioactivehamster/temporal": "~0.2.0",
         "barryvdh/laravel-debugbar": "^2.0",
         "sabre/vobject": "^4.0",
-        "tymon/jwt-auth": "^0.5.6"
+        "tymon/jwt-auth": "^0.5.6",
+        "spatie/laravel-robots-middleware": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.1",
