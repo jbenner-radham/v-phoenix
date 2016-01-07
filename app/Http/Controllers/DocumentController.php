@@ -43,14 +43,19 @@ class DocumentController extends Controller
             throw new RuntimeException('No document :(');
         }
 
-        $file = $request->file('document');
-        $data = $file->openFile()->fread($file->getSize());
+        $file     = $request->file('document');
+        $filename = $file->getClientOriginalName();
+        $data     = $file->openFile()->fread($file->getSize());
 
         $document = new Document;
-        $document->data = base64_encode($data);
+        $document->data      = $data;
+        $document->filename  = $filename;
         $document->mime_type = $file->getMimeType();
-        $document->title = $request->input('title', $file->getClientOriginalName());
+        $document->title     = $request->input('title', $filename);
         $document->save();
+
+        return redirect()->route('documents.index')
+                         ->with('message', 'Document created successfully.');
     }
 
     /**

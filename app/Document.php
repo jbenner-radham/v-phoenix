@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $title
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property string $filename
  */
 class Document extends Model
 {
